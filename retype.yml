@@ -3,7 +3,7 @@ output: .retype
 url: wiki.vishop.pl
 branding:
   title: VIshop
-  label: Dokumentacja
+  label: wiki
 links:
 - text: VIshop
   link: https://vishop.pl
