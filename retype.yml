@@ -1,0 +1,13 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  title: VIshop
+  label: Dokumentacja
+links:
+- text: VIshop
+  link: https://vishop.pl
+- text: serwer Discord
+  link: https://discord.gg/zmuajKx
+footer:
+  copyright: "&copy; Vishop {{ year }}. Wszelkie prawa zastrzeżone."
