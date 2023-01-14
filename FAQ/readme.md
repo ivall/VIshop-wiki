@@ -1,4 +1,9 @@
-# FAQ - Często zadawane pytania
+---
+icon: question
+---
+
+# FAQ
+#### Często zadawane pytania
 
 ==- Ile kosztuje VIshop?
 VIshop jest w pełni darmowym itemshopem. Nie pobieramy żadnych prowizji, ani opłat
