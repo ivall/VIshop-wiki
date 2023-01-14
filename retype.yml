@@ -1,6 +1,9 @@
 input: .
 output: .retype
 url: wiki.vishop.pl
+edit:
+  repo: "https://github.com/ivall/VIshop-wiki/edit"
+  branch: "main"
 branding:
   title: VIshop
   label: wiki

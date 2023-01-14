@@ -1,3 +1,7 @@
+---
+icon: server
+---
+
 # Plugin VIshop
 
 ## Instalacja
