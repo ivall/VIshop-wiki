@@ -9,5 +9,9 @@ links:
   link: https://vishop.pl
 - text: serwer Discord
   link: https://discord.gg/zmuajKx
+favicon: static/favicon.ico
+search:
+  noResultsFoundMsg: Nie znaleziono.
+  placeholder: Szukaj
 footer:
-  copyright: "&copy; Vishop {{ year }}. Wszelkie prawa zastrzeżone."
+  copyright: "&copy; VIshop {{ year }}. Wszelkie prawa zastrzeżone."
