@@ -6,7 +6,7 @@ icon: book
 
 ## Konfiguracja domeny w panelu VIshop
 W celu podpięcia domeny udaj się do ustawień sklepu, gdzie znajdziesz pole podpisane jako "Własna domena" i wpisz tam swoją
-domenę, po czym klinkij przycisk "zapisz".  
+domenę, po czym kliknij przycisk "zapisz".  
 ![](https://i.imgur.com/3uT01E3.png)
 ## Tworzenie rekordu CNAME
 Następnie wejdź na panel swojego dostawcy domeny (w naszym przypadku jest to Cloudflare), wybierz swoją domenę i przejdź do sekcji DNS. 
@@ -23,4 +23,4 @@ Klikamy "sprawdź rekordy txt". Naszym oczom ukaże się nazwa rekordu TXT oraz 
 
 Przechodzimy ponownie do panelu operatora domeny i tworzymy nowy rekord DNS z typem TXT.
 ![](https://i.imgur.com/pNB4jgG.png)  
-Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu maksymalnie kilkunastu godzin.
+:tada: Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu maksymalnie kilkunastu godzin.
