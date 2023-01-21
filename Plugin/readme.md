@@ -5,8 +5,8 @@ icon: server
 # Plugin VIshop
 
 ## Instalacja
-Pobieramy najnowszą wersję pluginu z [tej strony](https://github.com/ivall/VIshop-plugin/releases). Następnie dodajemy plugin
-na nasz serwer Minecraft. Po dodaniu pluginu na serwer należy **zrestartować serwer**.
+Pobieramy najnowszą wersję pluginu z [tej strony](https://github.com/ivall/VIshop-plugin/releases). Dokładne informacje na temat wspieranych przez plugin wersji i silników dostępne sa w ReadME pluginu, które mozesz sprawdzić [tutaj](https://github.com/ivall/VIshop-plugin/blob/main/README.md)
+Następnie dodajemy plugin na nasz serwer Minecraft. Po dodaniu pluginu na serwer należy **zrestartować serwer**.
 
 ## Konfiguracja
 Nieskonfigurowany plugin będzie wyświetlał się na czerwono w liście pluginów. Do poprawnego działania musimy skonfigurować plugin.
