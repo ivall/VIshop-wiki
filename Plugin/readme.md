@@ -5,7 +5,7 @@ icon: server
 # Plugin VIshop
 
 ## Instalacja
-Pobieramy najnowszą wersję pluginu z [tej strony](https://github.com/ivall/VIshop-plugin/releases). Wspieramy wersje od 1.8 do 1.19.3 na pochodnych Bukkita (Spigot, Paper, itp..) oraz pochodnych BungeeCorda i Velocity.
+Pobieramy najnowszą wersję pluginu z [tej strony](https://github.com/ivall/VIshop-plugin/releases). Dokładne informacje na temat wspieranych przez plugin wersji i silników dostępne sa w ReadME pluginu, które mozesz sprawdzić [tutaj](https://github.com/ivall/VIshop-plugin/blob/main/README.md)
 Następnie dodajemy plugin na nasz serwer Minecraft. Po dodaniu pluginu na serwer należy **zrestartować serwer**.
 
 ## Konfiguracja
