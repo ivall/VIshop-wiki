@@ -18,7 +18,7 @@ Jest to możliwe tylko dla sklepów premium, jeżeli nie posiadasz premium może
 
 
 ### Jakich operatorów obsługuje VIshop
-Na ten moment obsługujemy HotPay, CashBill, Paybylink, PayPal, MicroSMS, LVLUP, IceHost.
+Na ten moment obsługujemy HotPay, CashBill, Paybylink, PayPal, MicroSMS, IceHost.
 
 
 ### Czy potrzebuję działalność gospodarczą by mieć własny itemshop?
@@ -26,7 +26,7 @@ Nie, wystarczy działalność nierejestrowana.
 
 
 ### Jak dodać płatności PSC bez działalności gospodarczej?
-Możesz użyć operatora LVLUP lub IceHost. W takim przypadku pieniądze idą do wirtualnego portfela i później możemy je sprzedać innym użytkownikom.
+Możesz użyć operatora IceHost. W takim przypadku pieniądze idą do wirtualnego portfela i później możemy je sprzedać innym użytkownikom.
 
 
 ### Jak dodawać zdjęcia w VIshop?
