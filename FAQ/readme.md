@@ -37,4 +37,4 @@ W polu gdzie wymagane jest zdjęcie należy podac **bezpośredni** link do zdję
 Powodów może być wiele, najpopularniejszymi problemami są niepoprawna konfiguracja pluginu i niepoprawne skonfigurowanie webhooka.
 
 ### Z jakich technologii korzysta VIshop?
-HTML, CSS, JavaScript, Vue, Vuetify, Python, Django + Django Rest Framework, mySQL oraz Java (do pluginu mc)
+HTML, CSS, JavaScript, Vue, Vuetify, Python, Django + Django Rest Framework, MySQL oraz Java (do pluginu mc)
