@@ -10,7 +10,7 @@ branding:
 links:
 - text: VIshop
   link: https://vishop.pl
-- text: serwer Discord
+- text: Discord
   link: https://discord.gg/zmuajKx
 favicon: static/favicon.ico
 search:
