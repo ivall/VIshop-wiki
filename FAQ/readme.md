@@ -20,6 +20,7 @@ Jest to możliwe tylko dla sklepów premium, jeżeli nie posiadasz premium może
 ### Jakich operatorów obsługuje VIshop
 Na ten moment obsługujemy HotPay, CashBill, Paybylink, PayPal, MicroSMS, IceHost.
 
+Dziękujemy <a href="https://patryqhyper.pl" target="_blank">Patrykowi Vizauer</a> za pomoc z integracją płatności ( ͡° ͜ʖ ͡°)
 
 ### Czy potrzebuję działalność gospodarczą by mieć własny itemshop?
 Nie, wystarczy działalność nierejestrowana.
