@@ -10,8 +10,8 @@ domenę, po czym kliknij przycisk "zapisz".
 ![](https://i.imgur.com/3uT01E3.png)
 ## Tworzenie rekordu CNAME
 Następnie wejdź na panel swojego dostawcy domeny (w naszym przypadku jest to Cloudflare), wybierz swoją domenę i przejdź do sekcji DNS. 
-Utwórz nowy rekord typu CNAME i ustaw go na vishop.pl, nazwa rekordu powinna być taka jest w panelu VIshop.
-Na przykład, gdy w panelu VIshop wpiszemy sklep.vishop.pl to nazwą rekordu CNAME jest sklep.
+Utwórz nowy rekord typu CNAME i ustaw go na `vishop.pl`, nazwa rekordu powinna być taka jest w panelu VIshop.
+Na przykład, gdy w panelu VIshop wpiszemy `sklep.vishop.pl` to nazwą rekordu CNAME jest `sklep.`. Oczywiście, zamiast `sklep.vishop.pl` wpisujemy swoją (sub)domenę.
 ![](https://i.imgur.com/9BkBjEg.png)
 ## Tworzenie rekordu TXT
 !!!success Rekordy TXT w przypadku Cloudflare
