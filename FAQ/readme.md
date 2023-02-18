@@ -30,10 +30,6 @@ Nie, wystarczy działalność nierejestrowana.
 Możesz użyć operatora IceHost. W takim przypadku pieniądze idą do wirtualnego portfela i później możemy je sprzedać innym użytkownikom.
 
 
-### Jak dodawać zdjęcia w VIshop?
-W polu gdzie wymagane jest zdjęcie należy podac **bezpośredni** link do zdjęcia. Możesz obejrzeć [ten poradnik](https://www.youtube.com/watch?v=7jv-_Hiox8g)
-
-
 ### Dlaczego dostaję pieniądze, a gracze nie otrzymują zakupionych usług?
 Powodów może być wiele, najpopularniejszymi problemami są niepoprawna konfiguracja pluginu i niepoprawne skonfigurowanie webhooka.
 
