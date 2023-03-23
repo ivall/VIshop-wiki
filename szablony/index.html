@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732900835950">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732908045173">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.732900835950" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.732908045173" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.732900835950" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.732908045173" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.732900835950" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.732908045173" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -205,6 +205,21 @@ Teraz otwieramy plik <code v-pre>nuxt.config.js</code> i dostosowujemy podstawow
 nazwą i tym samym rozszerzeniem.</p>
 <p>W celu zmiany ikony strony przechodzimy do folderu <code v-pre>static</code> i podmieniamy plik o nazwie <code v-pre>favicon.ico</code> na swój z taką samą
 nazwą.</p>
+<doc-anchor-target id="logo-na-stronie-głównej">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#logo-na-stronie-głównej">#</doc-anchor-trigger>
+        <span>Logo na stronie głównej</span>
+    </h3>
+</doc-anchor-target>
+<p>Szablon posiada łatwą możliwość dodania logo (lub dowolnej innej treści jak np. iframe youtube) na stronie głównej po
+prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> i odkomentować linijkę kodu w której jest tekst &quot;logo serwera&quot;.</p>
+<doc-anchor-target id="ikony-w-stopce">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ikony-w-stopce">#</doc-anchor-trigger>
+        <span>Ikony w stopce</span>
+    </h3>
+</doc-anchor-target>
+<p>Należy przejść do pliku <code v-pre>components/Footer.vue</code> i pododawać ikony w podanym miejscu według istniejącego już schematu.</p>
 <doc-anchor-target id="instalacja-szablonu">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-szablonu">#</doc-anchor-trigger>
@@ -236,6 +251,8 @@ poniższe komendy.<br />
 <p><code v-pre>echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginsudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginlinux/ubuntu   $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p>
 <p><code v-pre>sudo apt-get update</code></p>
 <p><code v-pre>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code></p>
+<p>Należy teraz przejść do pliku <code v-pre>nginx/nginx.conf</code> znajdującego się w naszym szablonie i ustawić domenę sklepu w
+wyznaczonym miejscu.</p>
 <p>Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
 polecenia</p>
 <p><code v-pre>docker compose up -d --build </code></p>
