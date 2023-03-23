@@ -40,6 +40,7 @@ docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, je�
 poniższe komendy.  
 `sudo apt-get install gnupg ca-certificates lsb-release curl`  
 
+`sudo mkdir -m 0755 -p /etc/apt/keyrings`
 
 `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
 
@@ -49,17 +50,23 @@ poniższe komendy.
 
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
 
+`sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+
+`sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose`
+
+`sudo chmod +x /usr/bin/docker-compose`
+
 Należy teraz przejść do pliku `nginx/nginx.conf` znajdującego się w naszym szablonie i ustawić domenę sklepu w
 wyznaczonym miejscu.
 
 Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
 polecenia
 
-`docker compose up -d --build `
+`docker-compose up -d --build `
 
 Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać  
 `docker stop vishop`  
-`docker compose up -d --build`  
+`docker-compose up -d --build`  
 W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.
 
 ### Ręczna instalacja (niezalecana)
