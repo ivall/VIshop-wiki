@@ -64,6 +64,11 @@ polecenia
 
 `docker-compose up -d --build `
 
+!!!warning Port 80
+Na maszynie musi być wolny port 80, aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
+z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego serwera WWW dodaj proxy_pass na `http://localhost:3000`.
+!!!
+
 Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać  
 `docker stop vishop`  
 `docker-compose up -d --build`  
