@@ -17,6 +17,13 @@ nazwą i tym samym rozszerzeniem.
 W celu zmiany ikony strony przechodzimy do folderu `static` i podmieniamy plik o nazwie `favicon.ico` na swój z taką samą
 nazwą.
 
+### Logo na stronie głównej
+Szablon posiada łatwą możliwość dodania logo (lub dowolnej innej treści jak np. iframe youtube) na stronie głównej po 
+prawej stronie. Wystarczy przejść do pliku `pages/index.vue` i odkomentować linijkę kodu w której jest tekst "logo serwera".
+
+### Ikony w stopce
+Należy przejść do pliku `components/Footer.vue` i pododawać ikony w podanym miejscu według istniejącego już schematu.
+
 ## Instalacja szablonu
 Do poprawnego działania szablonu wymagana jest:
 - obsługa node.js w wersji do 12 - 16
@@ -41,6 +48,9 @@ poniższe komendy.
 `sudo apt-get update`
 
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+
+Należy teraz przejść do pliku `nginx/nginx.conf` znajdującego się w naszym szablonie i ustawić domenę sklepu w
+wyznaczonym miejscu.
 
 Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
 polecenia
