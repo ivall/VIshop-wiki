@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Konfiguracja operatora PayPal</title>
-    <meta name="title" content="Konfiguracja operatora PayPal">
-    <meta name="description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem." />
+    <title>Szablony</title>
+    <meta name="title" content="Szablony">
+    <meta name="description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop)," />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://wiki.vishop.pl/paypal/" />
+    <link rel="canonical" href="https://wiki.vishop.pl/szablony/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wiki.vishop.pl/paypal/">
-    <meta property="og:title" content="Konfiguracja operatora PayPal">
-    <meta property="og:description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem.">
+    <meta property="og:url" content="https://wiki.vishop.pl/szablony/">
+    <meta property="og:title" content="Szablony">
+    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wiki.vishop.pl/paypal/">
-    <meta property="twitter:title" content="Konfiguracja operatora PayPal">
-    <meta property="twitter:description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem.">
+    <meta property="twitter:url" content="https://wiki.vishop.pl/szablony/">
+    <meta property="twitter:title" content="Szablony">
+    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -173,29 +173,153 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="konfiguracja-operatora-paypal" class="break-words">
+<doc-anchor-target id="szablony" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-operatora-paypal">#</doc-anchor-trigger>
-        <span>Konfiguracja operatora PayPal</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#szablony">#</doc-anchor-trigger>
+        <span>Szablony</span>
     </h1>
 </doc-anchor-target>
+<p>VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),
+które można hostować u siebie i dowolnie edytować. Aktualnie dostępny jest jeden szablon.</p>
 <doc-anchor-target id="konfiguracja">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja">#</doc-anchor-trigger>
         <span>Konfiguracja</span>
     </h2>
 </doc-anchor-target>
-<p>Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod <a href="https://www.youtube.com/watch?v=GZRHQoLBUnI">tym linkiem</a>.</p>
-<doc-anchor-target id="dlaczego-nie-działa-pomimo-poprawnych-danych">
+<doc-anchor-target id="konfiguracja-szablonu">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-szablonu">#</doc-anchor-trigger>
+        <span>Konfiguracja szablonu</span>
+    </h3>
+</doc-anchor-target>
+<p>Pobieramy szablon z panelu VIshop z zakładki &quot;szablony&quot;. Otwieramy plik <code v-pre>.env</code>, gdzie wpisujemy id naszego sklepu.
+Teraz otwieramy plik <code v-pre>nuxt.config.js</code> i dostosowujemy podstawowe ustawienia pod siebie zgodnie z ich opisem.</p>
+<doc-anchor-target id="zmiana-zdjęć">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zmiana-zdjęć">#</doc-anchor-trigger>
+        <span>Zmiana zdjęć</span>
+    </h3>
+</doc-anchor-target>
+<p>Aby zmienić tło strony głównej wystarczy wejść w folder <code v-pre>assets</code> i podmienić plik <code v-pre>background.jpg</code> na swój z taką samą
+nazwą i tym samym rozszerzeniem.</p>
+<p>W celu zmiany ikony strony przechodzimy do folderu <code v-pre>static</code> i podmieniamy plik o nazwie <code v-pre>favicon.ico</code> na swój z taką samą
+nazwą.</p>
+<doc-anchor-target id="instalacja-szablonu">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#dlaczego-nie-działa-pomimo-poprawnych-danych">#</doc-anchor-trigger>
-        <span>Dlaczego nie działa, pomimo poprawnych danych?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-szablonu">#</doc-anchor-trigger>
+        <span>Instalacja szablonu</span>
     </h2>
 </doc-anchor-target>
-<p>Jeżeli wprowadzone w VIshop dane operatora PayPal są poprawne, a operator nadal nie działa najprawdopodobniej nie wybrano
-opcji live podczas konfiguracji i operatora działa w trybie sandbox. Należy to zmienić wybierając opcję live, będzie to
-wymagało ulepszenia konta do konta biznesowego. Firma nie jest jednak potrzebna, wystarczy skonfigurować konto biznesowe
-jako działalność nierejestrowana. W nazwie firmy dajemy imie nazwisko działalność nierejestrowana.</p>
+<p>Do poprawnego działania szablonu wymagana jest:</p>
+<ul>
+<li>obsługa node.js w wersji do 12 - 16</li>
+<li>serwer WWW (zalecamy nginx - w tym poradniku zostanie on wykorzystany)</li>
+</ul>
+<p>Szablon będzie działał na:</p>
+<ul>
+<li>serwerze VPS</li>
+<li>serwerze dedykowanym</li>
+<li>hostingu wspierającym node.js</li>
+</ul>
+<doc-anchor-target id="automatyczna-instalacja-zalecana">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#automatyczna-instalacja-zalecana">#</doc-anchor-trigger>
+        <span>Automatyczna instalacja (zalecana)</span>
+    </h3>
+</doc-anchor-target>
+<p>Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
+docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wkleić
+poniższe komendy.<br />
+<code v-pre>sudo apt-get install gnupg ca-certificates lsb-release curl</code></p>
+<p><code v-pre>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code></p>
+<p><code v-pre>echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginsudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginlinux/ubuntu   $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p>
+<p><code v-pre>sudo apt-get update</code></p>
+<p><code v-pre>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code></p>
+<p>Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
+polecenia</p>
+<p><code v-pre>docker compose up -d --build </code></p>
+<p>Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać<br />
+<code v-pre>docker stop vishop</code><br />
+<code v-pre>docker compose up -d --build</code><br />
+W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</p>
+<doc-anchor-target id="ręczna-instalacja-niezalecana">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ręczna-instalacja-niezalecana">#</doc-anchor-trigger>
+        <span>Ręczna instalacja (niezalecana)</span>
+    </h3>
+</doc-anchor-target>
+<p>Poniższy poradnik został zrealizowany na ubuntu 20.</p>
+<doc-anchor-target id="instalacja-nodejs-oraz-npm">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-nodejs-oraz-npm">#</doc-anchor-trigger>
+        <span>Instalacja node.js oraz npm</span>
+    </h4>
+</doc-anchor-target>
+<p>Jeżeli nie mamy zainstalowanego node.js lub npm na maszynie to musimy zainstalować. Najpierw wpisujemy polecenie
+<code v-pre>apt-get update</code>, a następnie pobieramy node oraz npm poprzez polecenia:</p>
+<p><code v-pre>curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -</code><br />
+<code v-pre>sudo apt -y install nodejs</code><br />
+<code v-pre>sudo apt install npm</code></p>
+<doc-anchor-target id="wgrywanie-szablonu">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wgrywanie-szablonu">#</doc-anchor-trigger>
+        <span>Wgrywanie szablonu</span>
+    </h4>
+</doc-anchor-target>
+<p>Szablon wgrywamy poprzez FTP na maszynę, gdzie będzie on hostowany. Następnie używając SSH przechodzimy do
+jego lokalizacji (<code v-pre>cd /twoja/lokalizacja/szablonu</code>). Wpisujemy <code v-pre>npm install</code>, a po zakończeniu wykonywania owej komendy
+wpisujemy <code v-pre>npm run build</code>, po czym <code v-pre>screen</code> i <code v-pre>npm run start</code>, a następnie używamy skrótu klawiszowego ctrl+a+d.
+Nasz szablon działa teraz lokalnie na porcie 3000, pora udostępnić go światu!</p>
+<doc-anchor-target id="konfiguracja-nginx">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-nginx">#</doc-anchor-trigger>
+        <span>Konfiguracja nginx</span>
+    </h4>
+</doc-anchor-target>
+<p>Jeżeli nie posiadamy zainstalowanego nginx to wpisujemy <code v-pre>apt-get install nginx</code>. Przechodzimy teraz do folderu, gdzie
+będzie znajdowała się nasza konfiguracja nginx używając polecenia <code v-pre>cd /etc/nginx/sites-enabled</code>. Wpisujemy teraz <code v-pre>sudo nano vishop</code>
+i wklejamy następujący config:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">map $sent_http_content_type $expires {
+    &quot;text/html&quot;                 epoch;
+    &quot;text/html; charset=utf-8&quot;  epoch;
+    default                     off;
+}
+
+server {
+    listen          80;
+    server_name     _;    # tutaj wpisz swoja domene na ktorej masz rekord A
+
+    gzip            on;
+    gzip_types      text/plain application/xml text/css application/javascript;
+    gzip_min_length 1000;
+
+    location / {
+        expires $expires;
+
+        proxy_redirect                      off;
+        proxy_set_header Host               $host;
+        proxy_set_header X-Real-IP          $remote_addr;
+        proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_read_timeout                  1m;
+        proxy_connect_timeout               1m;
+        proxy_pass                          http://127.0.0.1:3000;
+    }
+}</code></pre>
+</doc-codeblock></div>
+<p>Zapisujemy i wychodzimy (ctrl+s, a później ctrl+x). Wpisujemy teraz <code v-pre>sudo systemctl start nginx</code> i <code v-pre>sudo systemctl restart nginx</code></p>
+<doc-anchor-target id="uruchomienie-lokalnie-jako-dev">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#uruchomienie-lokalnie-jako-dev">#</doc-anchor-trigger>
+        <span>Uruchomienie lokalnie jako dev</span>
+    </h2>
+</doc-anchor-target>
+<p>Wymagana jest wersja node 12 - 16. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
+i wpisać <code v-pre>npm install</code>, a następnie <code v-pre>npm run dev</code>. Teraz nasz szablon jest uruchomiony w trybie dev i mamy hot swapa, można
+teraz z łatwością edytować stronę mając podgląd na żywo.</p>
+<p>Po zakończeniu edycji szablon instalujemy tak jak normalnie (patrz wyżej).</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -203,7 +327,7 @@ jako działalność nierejestrowana. W nazwie firmy dajemy imie nazwisko działa
                             </div>
                             <footer class="clear-both">
                                 <div class="flex flex-wrap items-center justify-between mt-14">
-                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ivall/VIshop-wiki/edit/main/Paypal/readme.md" target="_blank" rel="noopener">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ivall/VIshop-wiki/edit/main/Szablony/readme.md" target="_blank" rel="noopener">
                                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         <span>Edit this page</span>
                                     </a>
@@ -211,23 +335,16 @@ jako działalność nierejestrowana. W nazwie firmy dajemy imie nazwisko działa
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../icehost/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../domena/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Konfiguracja operatora Ice​Host</span>
+                                                <span class="block mt-1">Podpinanie domeny</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../plugin/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Plugin V​Ishop</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -268,6 +385,6 @@ jako działalność nierejestrowana. W nazwie firmy dajemy imie nazwisko działa
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Konfiguracja operatora PayPal", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Szablony", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
