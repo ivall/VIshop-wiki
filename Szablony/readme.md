@@ -7,8 +7,8 @@ w dowolnie edytować. Aktualnie dostępny jest tylko jeden szablon, który znajd
 
 ## Konfiguracja
 ### Konfiguracja szablonu
-Pobieramy szablon z panelu VIshop z zakładki "szablony". Otwieramy plik `.env`, gdzie wpisujemy id naszego sklepu.
-Teraz otwieramy plik `nuxt.config.js` i dostosowujemy podstawowe ustawienia pod siebie zgodnie z ich opisem.
+Pobieramy szablon z panelu VIshop z zakładki "Szablony". Otwieramy plik `nuxt.config.js` i dostosowujemy podstawowe 
+ustawienia pod siebie zgodnie z ich opisem.
 
 ### Zmiana zdjęć
 Aby zmienić tło strony głównej wystarczy wejść w folder `assets` i podmienić plik `background.jpg` na swój z taką samą
