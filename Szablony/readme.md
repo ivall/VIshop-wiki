@@ -2,8 +2,8 @@
 icon: paintbrush
 ---
 # Szablony
-VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop), 
-które można hostować u siebie i dowolnie edytować. Aktualnie dostępny jest jeden szablon.
+VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy
+w dowolnie edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.
 
 ## Konfiguracja
 ### Konfiguracja szablonu
@@ -35,6 +35,7 @@ Szablon będzie działał na:
 - hostingu wspierającym node.js
 
 ### Automatyczna instalacja (zalecana)
+### Instalacja dockera
 Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
 docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wkleić
 poniższe komendy.  
@@ -56,6 +57,8 @@ poniższe komendy.
 
 `sudo chmod +x /usr/bin/docker-compose`
 
+#### Wgrywanie szablonu
+
 Należy teraz przejść do pliku `nginx/nginx.conf` znajdującego się w naszym szablonie i ustawić domenę sklepu w
 wyznaczonym miejscu.
 
@@ -67,6 +70,7 @@ polecenia
 !!!warning Port 80
 Na maszynie musi być wolny port 80, aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
 z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego serwera WWW dodaj proxy_pass na `http://localhost:3000`.
+Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pododawać w pliku nginx/nginx.conf
 !!!
 
 Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać  
