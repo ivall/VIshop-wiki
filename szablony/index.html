@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732918775488">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732993798541">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Szablony</title>
     <meta name="title" content="Szablony">
-    <meta name="description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop)," />
+    <meta name="description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://wiki.vishop.pl/szablony/" />
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="og:title" content="Szablony">
-    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),">
+    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="twitter:title" content="Szablony">
-    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),">
+    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.732918775488" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.732993798541" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.732918775488" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.732993798541" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.732918775488" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.732993798541" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -179,8 +179,8 @@
         <span>Szablony</span>
     </h1>
 </doc-anchor-target>
-<p>VIshop w pakiecie premium oferuje szablony (strony internetowe - front-end połączony z back-endem VIshop),
-które można hostować u siebie i dowolnie edytować. Aktualnie dostępny jest jeden szablon.</p>
+<p>VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy
+w dowolnie edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.</p>
 <doc-anchor-target id="konfiguracja">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja">#</doc-anchor-trigger>
@@ -243,6 +243,12 @@ prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> 
         <span>Automatyczna instalacja (zalecana)</span>
     </h3>
 </doc-anchor-target>
+<doc-anchor-target id="instalacja-dockera">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-dockera">#</doc-anchor-trigger>
+        <span>Instalacja dockera</span>
+    </h3>
+</doc-anchor-target>
 <p>Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
 docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wkleić
 poniższe komendy.<br />
@@ -255,6 +261,12 @@ poniższe komendy.<br />
 <p><code v-pre>sudo curl -L &quot;https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p>
 <p><code v-pre>sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p>
 <p><code v-pre>sudo chmod +x /usr/bin/docker-compose</code></p>
+<doc-anchor-target id="wgrywanie-szablonu">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wgrywanie-szablonu">#</doc-anchor-trigger>
+        <span>Wgrywanie szablonu</span>
+    </h4>
+</doc-anchor-target>
 <p>Należy teraz przejść do pliku <code v-pre>nginx/nginx.conf</code> znajdującego się w naszym szablonie i ustawić domenę sklepu w
 wyznaczonym miejscu.</p>
 <p>Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
@@ -274,7 +286,8 @@ polecenia</p>
         <div class="pr-5 ml-3 w-full">
             <h5>Port 80</h5>
 <p>Na maszynie musi być wolny port 80, aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
-z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego serwera WWW dodaj proxy_pass na <code v-pre>http://localhost:3000</code>.</p>
+z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego serwera WWW dodaj proxy_pass na <code v-pre>http://localhost:3000</code>.
+Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pododawać w pliku nginx/nginx.conf</p>
         </div>
     </div>
 </div>
@@ -300,9 +313,9 @@ W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</
 <p><code v-pre>curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -</code><br />
 <code v-pre>sudo apt -y install nodejs</code><br />
 <code v-pre>sudo apt install npm</code></p>
-<doc-anchor-target id="wgrywanie-szablonu">
+<doc-anchor-target id="wgrywanie-szablonu-1">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#wgrywanie-szablonu">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wgrywanie-szablonu-1">#</doc-anchor-trigger>
         <span>Wgrywanie szablonu</span>
     </h4>
 </doc-anchor-target>
