@@ -35,7 +35,7 @@ Szablon będzie działał na:
 - hostingu wspierającym node.js
 
 ### Automatyczna instalacja (zalecana)
-### Instalacja dockera
+#### Instalacja dockera
 Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
 docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wkleić
 poniższe komendy.  
@@ -131,7 +131,7 @@ Zapisujemy i wychodzimy (ctrl+s, a później ctrl+x). Wpisujemy teraz `sudo syst
 
 ## Uruchomienie lokalnie jako dev
 Wymagana jest wersja node 12 - 16. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
-i wpisać `npm install`, a następnie `npm run dev`. Teraz nasz szablon jest uruchomiony w trybie dev i mamy hot swapa, można
+i wpisać `npm install`, a następnie `npm run dev`. Teraz nasz szablon jest uruchomiony w trybie dev i mamy hot reload, można
 teraz z łatwością edytować stronę mając podgląd na żywo.
 
 Po zakończeniu edycji szablon instalujemy tak jak normalnie (patrz wyżej).
