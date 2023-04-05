@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733000720088">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734031934539">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Szablony</title>
     <meta name="title" content="Szablony">
-    <meta name="description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy" />
+    <meta name="description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://wiki.vishop.pl/szablony/" />
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="og:title" content="Szablony">
-    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy">
+    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="twitter:title" content="Szablony">
-    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy">
+    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.733000720088" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.734031934539" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.733000720088" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.734031934539" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.733000720088" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.734031934539" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -179,8 +179,8 @@
         <span>Szablony</span>
     </h1>
 </doc-anchor-target>
-<p>VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które hostujemy u siebie i możemy
-w dowolnie edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.</p>
+<p>VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy
+w dowolny sposób go edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.</p>
 <doc-anchor-target id="konfiguracja">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja">#</doc-anchor-trigger>
@@ -233,14 +233,14 @@ prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> 
 </ul>
 <p>Szablon będzie działał na:</p>
 <ul>
-<li>serwerze VPS</li>
+<li>virtual private server (Potocznie zwanym serwerze VPS)</li>
 <li>serwerze dedykowanym</li>
-<li>hostingu wspierającym node.js</li>
+<li>hostingu z obsługą node.js</li>
 </ul>
-<doc-anchor-target id="automatyczna-instalacja-zalecana">
+<doc-anchor-target id="instalacja-z-wykorzystaniem-docker-i-docker-compose-zalecana">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#automatyczna-instalacja-zalecana">#</doc-anchor-trigger>
-        <span>Automatyczna instalacja (zalecana)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-z-wykorzystaniem-docker-i-docker-compose-zalecana">#</doc-anchor-trigger>
+        <span>Instalacja z wykorzystaniem docker i docker-compose (zalecana)</span>
     </h3>
 </doc-anchor-target>
 <doc-anchor-target id="instalacja-dockera">
@@ -250,8 +250,7 @@ prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> 
     </h4>
 </doc-anchor-target>
 <p>Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
-docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wkleić
-poniższe komendy.<br />
+docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wykonać poniższe polecenia.<br />
 <code v-pre>sudo apt-get install gnupg ca-certificates lsb-release curl</code></p>
 <p><code v-pre>sudo mkdir -m 0755 -p /etc/apt/keyrings</code></p>
 <p><code v-pre>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code></p>
@@ -285,7 +284,7 @@ polecenia</p>
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Port 80</h5>
-<p>Na maszynie musi być wolny port 80, aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
+<p>Na serwerze musi być wolny port 80 (http), aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
 z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego serwera WWW dodaj proxy_pass na <code v-pre>http://localhost:3000</code>.
 Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pododawać w pliku nginx/nginx.conf</p>
         </div>
@@ -301,14 +300,14 @@ W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</
         <span>Ręczna instalacja (niezalecana)</span>
     </h3>
 </doc-anchor-target>
-<p>Poniższy poradnik został zrealizowany na ubuntu 20.</p>
+<p>Poniższy poradnik został zrealizowany na ubuntu 20.04.</p>
 <doc-anchor-target id="instalacja-nodejs-oraz-npm">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-nodejs-oraz-npm">#</doc-anchor-trigger>
         <span>Instalacja node.js oraz npm</span>
     </h4>
 </doc-anchor-target>
-<p>Jeżeli nie mamy zainstalowanego node.js lub npm na maszynie to musimy zainstalować. Najpierw wpisujemy polecenie
+<p>Jeżeli nie mamy zainstalowanego node.js lub npm na serwerze to musimy zainstalować. Najpierw wpisujemy polecenie
 <code v-pre>apt-get update</code>, a następnie pobieramy node oraz npm poprzez polecenia:</p>
 <p><code v-pre>curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -</code><br />
 <code v-pre>sudo apt -y install nodejs</code><br />
@@ -319,9 +318,8 @@ W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</
         <span>Wgrywanie szablonu</span>
     </h4>
 </doc-anchor-target>
-<p>Szablon wgrywamy poprzez FTP na maszynę, gdzie będzie on hostowany. Następnie używając SSH przechodzimy do
-jego lokalizacji (<code v-pre>cd /twoja/lokalizacja/szablonu</code>). Wpisujemy <code v-pre>npm install</code>, a po zakończeniu wykonywania owej komendy
-wpisujemy <code v-pre>npm run build</code>, po czym <code v-pre>screen</code> i <code v-pre>npm run start</code>, a następnie używamy skrótu klawiszowego ctrl+a+d.
+<p>Szablon wgrywamy poprzez S-FTP/FTP na serwer, gdzie będzie on utrzymywany. Następnie używając SSH przechodzimy do
+jego lokalizacji (<code v-pre>cd /twoja/lokalizacja/szablonu</code>). Wykonujemy <code v-pre>npm install</code>, a po zakończeniu uruchamiamy <code v-pre>npm run build</code>, następnie <code v-pre>screen</code> i <code v-pre>npm run start</code>, by wyjść z sesji screena użyjemy następującego skrótu <code v-pre>CTRL + A + D</code>.
 Nasz szablon działa teraz lokalnie na porcie 3000, pora udostępnić go światu!</p>
 <doc-anchor-target id="konfiguracja-nginx">
     <h4>
@@ -329,9 +327,9 @@ Nasz szablon działa teraz lokalnie na porcie 3000, pora udostępnić go światu
         <span>Konfiguracja nginx</span>
     </h4>
 </doc-anchor-target>
-<p>Jeżeli nie posiadamy zainstalowanego nginx to wpisujemy <code v-pre>apt-get install nginx</code>. Przechodzimy teraz do folderu, gdzie
+<p>Jeżeli nie posiadamy zainstalowanego nginx to instalujemy go następującym poleceniem <code v-pre>apt-get install nginx</code>. Przechodzimy teraz do folderu, gdzie
 będzie znajdowała się nasza konfiguracja nginx używając polecenia <code v-pre>cd /etc/nginx/sites-enabled</code>. Wpisujemy teraz <code v-pre>sudo nano vishop</code>
-i wklejamy następujący config:</p>
+i wklejamy następującą konfigurację:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">map $sent_http_content_type $expires {
     &quot;text/html&quot;                 epoch;
@@ -361,7 +359,8 @@ server {
     }
 }</code></pre>
 </doc-codeblock></div>
-<p>Zapisujemy i wychodzimy (ctrl+s, a później ctrl+x). Wpisujemy teraz <code v-pre>sudo systemctl start nginx</code> i <code v-pre>sudo systemctl restart nginx</code></p>
+<p>Zapisujemy i wychodzimy (ctrl+s, a później ctrl+x).
+Uruchamiamy nasz serwer nginx za pomocą polecenia - <code v-pre>sudo systemctl start nginx</code> / bądź restartujemy jeżeli takowy serwer już działa - <code v-pre>sudo systemctl restart nginx</code></p>
 <doc-anchor-target id="uruchomienie-lokalnie-jako-dev">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#uruchomienie-lokalnie-jako-dev">#</doc-anchor-trigger>
