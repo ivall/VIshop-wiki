@@ -38,23 +38,10 @@ Szablon będzie działał na:
 #### Instalacja dockera
 Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
 docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wykonać poniższe polecenia.  
-`sudo apt-get install gnupg ca-certificates lsb-release curl`  
 
-`sudo mkdir -m 0755 -p /etc/apt/keyrings`
+`curl -fsSL https://get.docker.com -o get-docker.sh`
 
-`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
-
-`echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginsudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginlinux/ubuntu   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
-
-`sudo apt-get update`
-
-`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
-
-`sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
-
-`sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose`
-
-`sudo chmod +x /usr/bin/docker-compose`
+`sudo sh ./get-docker.sh --dry-run`
 
 #### Wgrywanie szablonu
 
@@ -64,7 +51,7 @@ wyznaczonym miejscu.
 Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
 polecenia
 
-`docker-compose up -d --build `
+`docker compose up -d --build `
 
 !!!warning Port 80
 Na serwerze musi być wolny port 80 (http), aby zadziałało to poprawnie. Jeżeli takowy jest zajęty to albo go zwolnij, albo
@@ -72,9 +59,13 @@ z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego s
 Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pododawać w pliku nginx/nginx.conf
 !!!
 
+!!!warning => ERROR [internal] load metadata for docker.io/library/nginx:1.19.0-alpine
+    Jeżeli taki błąd się wyświetla przy buildowaniu, wejdz w nginx/Dockerfile i zmien `FROM nginx:1.19.0-alpine` na `FROM nginx:latest` i zbuilduj ponownie. 
+!!!
+
 Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać  
 `docker stop vishop`  
-`docker-compose up -d --build`  
+`docker compose up -d --build`  
 W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.
 
 ### Ręczna instalacja (niezalecana)
