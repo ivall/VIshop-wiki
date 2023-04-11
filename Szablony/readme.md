@@ -59,10 +59,6 @@ z pliku docker-compose.yml usuń częśc odpowiedzialną za nginx i do swojego s
 Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pododawać w pliku nginx/nginx.conf
 !!!
 
-!!!warning => ERROR [internal] load metadata for docker.io/library/nginx:1.19.0-alpine
-Jeżeli taki błąd się wyświetla przy buildowaniu, wejdz w nginx/Dockerfile i zmien `FROM nginx:1.19.0-alpine` na `FROM nginx:latest` i zbuilduj ponownie. 
-!!!
-
 Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać  
 `docker stop vishop`  
 `docker compose up -d --build`  
