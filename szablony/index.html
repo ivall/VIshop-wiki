@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734031934539">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737757576511">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.734031934539" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.737757576511" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.734031934539" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.737757576511" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.734031934539" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.737757576511" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -250,16 +250,9 @@ prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> 
     </h4>
 </doc-anchor-target>
 <p>Automatyczna instalacja szablonu wykorzystuje dockera. Poniższe komendy zostały przygotowane dla systemu ubuntu, ale
-docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wykonać poniższe polecenia.<br />
-<code v-pre>sudo apt-get install gnupg ca-certificates lsb-release curl</code></p>
-<p><code v-pre>sudo mkdir -m 0755 -p /etc/apt/keyrings</code></p>
-<p><code v-pre>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code></p>
-<p><code v-pre>echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginsudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-pluginlinux/ubuntu   $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p>
-<p><code v-pre>sudo apt-get update</code></p>
-<p><code v-pre>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code></p>
-<p><code v-pre>sudo curl -L &quot;https://github.com/docker/compose/releases/download/v2.17.0/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p>
-<p><code v-pre>sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p>
-<p><code v-pre>sudo chmod +x /usr/bin/docker-compose</code></p>
+docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, jeśli jeszcze go nie mamy - wystarczy wykonać poniższe polecenia.</p>
+<p><code v-pre>curl -fsSL https://get.docker.com -o get-docker.sh</code></p>
+<p><code v-pre>sudo sh ./get-docker.sh</code></p>
 <doc-anchor-target id="wgrywanie-szablonu">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#wgrywanie-szablonu">#</doc-anchor-trigger>
@@ -270,7 +263,7 @@ docker będzie działał na każdym systemie. Najpierw zainstalujmy dockera, je�
 wyznaczonym miejscu.</p>
 <p>Teraz należy przejść do folderu, gdzie jest nasz szablon (tak, abyśmy mieli dostęp do plików dockera) i wpisać poniższe
 polecenia</p>
-<p><code v-pre>docker-compose up -d --build </code></p>
+<p><code v-pre>docker compose up -d --build </code></p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -292,7 +285,7 @@ Możesz też przenieść obecną konfigurację nginxa do dockera - wystarczy pod
 </div>
 <p>Teraz nasza aplikacja działa poprawnie. Jeżeli będziemy chcieli coś zmienić wystarczy dokonać zmian i wpisać<br />
 <code v-pre>docker stop vishop</code><br />
-<code v-pre>docker-compose up -d --build</code><br />
+<code v-pre>docker compose up -d --build</code><br />
 W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</p>
 <doc-anchor-target id="ręczna-instalacja-niezalecana">
     <h3>
