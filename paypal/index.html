@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737757576511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740594270889">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 2.4.0">
+    <meta name="generator" content="Retype 3.0.3">
 
     <!-- Primary Meta Tags -->
     <title>Konfiguracja operatora PayPal</title>
     <meta name="title" content="Konfiguracja operatora PayPal">
-    <meta name="description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem." />
+    <meta name="description" content="Pierwszym krokiem jest przejście do panelu developera PayPal i zalogowano się. Następnie w prawym górnym rogu przełączamy suwak z sandbox na live i..." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://wiki.vishop.pl/paypal/" />
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.vishop.pl/paypal/">
     <meta property="og:title" content="Konfiguracja operatora PayPal">
-    <meta property="og:description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem.">
+    <meta property="og:description" content="Pierwszym krokiem jest przejście do panelu developera PayPal i zalogowano się. Następnie w prawym górnym rogu przełączamy suwak z sandbox na live i...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.vishop.pl/paypal/">
     <meta property="twitter:title" content="Konfiguracja operatora PayPal">
-    <meta property="twitter:description" content="Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod tym linkiem.">
+    <meta property="twitter:description" content="Pierwszym krokiem jest przejście do panelu developera PayPal i zalogowano się. Następnie w prawym górnym rogu przełączamy suwak z sandbox na live i...">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.737757576511" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=3.0.3.740594270889" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.737757576511" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.737757576511" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=3.0.3.740594270889" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=3.0.3.740594270889" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -166,8 +166,8 @@
             <div class="grow min-w-0 dark:bg-dark-850">
                 <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
                 <div class="flex">
-                    <div class="grow min-w-0 px-6 md:px-16">
-                        <main class="relative pt-6 pb-16">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
@@ -185,17 +185,38 @@
         <span>Konfiguracja</span>
     </h2>
 </doc-anchor-target>
-<p>Szczegółowy poradnik video dotyczący konfiguracji operatora PayPal znajduje się pod <a href="https://www.youtube.com/watch?v=GZRHQoLBUnI">tym linkiem</a>.</p>
-<doc-anchor-target id="dlaczego-nie-działa-pomimo-poprawnych-danych">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#dlaczego-nie-działa-pomimo-poprawnych-danych">#</doc-anchor-trigger>
-        <span>Dlaczego nie działa, pomimo poprawnych danych?</span>
-    </h2>
+<doc-anchor-target id="zmiana-trybu-z-sandbox-na-live">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zmiana-trybu-z-sandbox-na-live">#</doc-anchor-trigger>
+        <span>Zmiana trybu z sandbox na live</span>
+    </h3>
 </doc-anchor-target>
-<p>Jeżeli wprowadzone w VIshop dane operatora PayPal są poprawne, a operator nadal nie działa najprawdopodobniej nie wybrano
-opcji live podczas konfiguracji i operatora działa w trybie sandbox. Należy to zmienić wybierając opcję live, będzie to
-wymagało ulepszenia konta do konta biznesowego. Firma nie jest jednak potrzebna, wystarczy skonfigurować konto biznesowe
-jako działalność nierejestrowana. W nazwie firmy dajemy imie nazwisko działalność nierejestrowana.</p>
+<p>Pierwszym krokiem jest przejście do <a href="https://developer.paypal.com/dashboard/">panelu developera PayPal</a> i zalogowano się.
+Następnie w prawym górnym rogu przełączamy suwak z sandbox na live i klikamy upgrade now (jeżeli nam wyskoczy taka opcja).
+Teraz zostaliśmy przekierowani na kolejną stronę, wybieramy interesującą nas opcję dot. e-mail. Teraz wybieramy opcję
+&quot;rozszerz swoje konto&quot;. Teraz uzupełniamy pola tekstowe:</p>
+<ul>
+<li>oficjalna nazwa firmy - jeżeli prowadzimy działalność nierejestrowaną to wpisujemy &quot;imię nazwisko działalność nierejestrowana&quot;</li>
+<li>swój numer telefonu</li>
+<li>uzupełniamy swój adres zamieszkania</li>
+</ul>
+<p>Kontynuujemy, w rodzaj działalności wybieramy naszą działalność (w przypadku nierejestrowanej jest to &quot;osoba fizyczna&quot;).
+Teraz uzupełniamy pola odpowiednio do tego czym będziemy się zajmować i idziemy dalej. Teraz widoczne jest podsumowanie -
+weryfikujemy dane i przesyłamy.</p>
+<doc-anchor-target id="dodawanie-operatora-do-vishop">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dodawanie-operatora-do-vishop">#</doc-anchor-trigger>
+        <span>Dodawanie operatora do VIshop</span>
+    </h3>
+</doc-anchor-target>
+<p>Wracamy na panel developera PayPal i wybieramy zakładkę &quot;Apps &amp; Credentials&quot;. Klikamy &quot;Create App&quot;, w nazwie wpisujemy np.
+nazwę naszego serwera, &quot;Type&quot; zostawiamy tak jak jest i klikamy &quot;Create App&quot;.</p>
+<p>Kopiujemy &quot;Client ID&quot; i wklejamy do panelu VIshop w oknie dodawania operatora PayPal w polu &quot;ID klienta&quot;. Robimy to samo z
+&quot;Secret key 1&quot; - kopiujemy i wklejamy do panelu VIshop w polu Sekret.</p>
+<p>Teraz w panelu PayPal zjeżdżamy niżej i klikamy &quot;Add webhook&quot;. W polu &quot;Webhook URL&quot; wklejamy link z okna dodawania operatora PayPal
+z panelu VIshop, ma on w sobie słowo &quot;webhooks&quot;. W &quot;Event types&quot; zaznaczamy &quot;All Events&quot; (możemy pojedynczo powybierać
+potrzebne, ale tak będzie prościej ;)). Teraz nasz &quot;Webhook ID&quot; z panelu PayPal kopiujemy i wklejamy w polu &quot;ID webhooka&quot;.</p>
+<p><span class="docs-emoji">&#x1F389;</span> Jeżeli poprawnie wykonałeś wszystkie kroki to płatność PayPal w twoim itemshopie powinna działać.</p>
 
                                 
                                 <!-- Required only on API pages -->
