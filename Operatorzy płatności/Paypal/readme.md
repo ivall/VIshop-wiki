@@ -2,7 +2,7 @@
 icon: repo
 ---
 
-# Konfiguracja operatora PayPal
+# Konfiguracja PayPal
 
 ## Konfiguracja
 ### Zmiana trybu z sandbox na live

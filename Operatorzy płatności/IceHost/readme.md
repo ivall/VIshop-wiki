@@ -1,7 +1,7 @@
 ---
 icon: repo
 ---
-# Konfiguracja operatora IceHost
+# Konfiguracja IceHost
 ## Konfiguracja IceHost
 Wchodzimy na [panel IceHost](https://dash.icehost.pl). Następnie wybieramy zakladkę "[Klucze API](https://dash.icehost.pl/account/api)".
 Po wybraniu zakładki nazywamy klucz (np. vishop), zostawiamy puste pole "Dopuszczone IP".
