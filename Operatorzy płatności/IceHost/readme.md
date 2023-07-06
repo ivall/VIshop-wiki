@@ -3,7 +3,8 @@ icon: repo
 ---
 # Konfiguracja IceHost
 ## Konfiguracja IceHost
-Wchodzimy na [panel IceHost](https://dash.icehost.pl). Następnie wybieramy zakladkę "[Klucze API](https://dash.icehost.pl/account/api)".
+Wchodzimy na <a href="https://dash.icehost.pl" target="_blank" rel="nofollow noopener">panel IceHost</a>. Następnie wybieramy 
+zakladkę "<a href="https://dash.icehost.pl/account/api" target="_blank" rel="nofollow noopener">Klucze API</a>".
 Po wybraniu zakładki nazywamy klucz (np. vishop), zostawiamy puste pole "Dopuszczone IP".
 Powinno tak to wyglądać: ![](https://i.imgur.com/xbgEyY9.png)  
 Następnie klikamy "Utwórz" i wyświetli się klucz, który trzeba skopiować.

@@ -3,7 +3,7 @@ icon: repo
 ---
 # Konfiguracja Paybylink
 ## Zakładanie konta
-Aby skorzystać z operatora Paybylink najpierw musimy założyć konto - zrobimy to [tutaj](https://paybylink.pl/user/access/invite/11104527e581a6cfe16d5e7826d83dc3/).
+Aby skorzystać z operatora Paybylink najpierw musimy założyć konto - zrobimy to <a href="https://paybylink.pl/user/access/invite/11104527e581a6cfe16d5e7826d83dc3/" target="_blank" rel="nofollow noopener">tutaj</a>.
 Jeżeli prowadzimy działalność nierejestrowaną to w polu NIP wpisujemy 10 zer, w REGION wpisujemy 9 zer, a w nazwie firmy
 "imię nazwisko działalność nierejestrowana". Po rejestracji musimy zweryfikować nasze konto wysyłając przelew w celu zweryfikowania
 podanych danych, pełne informacje znajdziesz w panelu Paybylink.
