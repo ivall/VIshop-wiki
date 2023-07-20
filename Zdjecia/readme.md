@@ -10,7 +10,8 @@ Przechodzimy na wyżej wspomnianą stronę imgur i klikamy przycisk "New post", 
 wgrywamy nasze zdjęcie, możemy wybrać plik z komputera albo wkleić zdjęcie znajdujące się w naszym schowku poprzez 
 kombinację klawiszy ctrl + v.
 
-Po dodaniu zdjęcia klikamy prawym przyciskiem myszy na zdjęcie i wybieramy opcję "Kopiuj adres obrazu". 
+Po dodaniu zdjęcia klikamy prawym przyciskiem myszy na zdjęcie i wybieramy opcję "Kopiuj adres obrazu".
+Jeśli nasz adres zaczyna się od `blob`, oznacza to, że zdjęcie nie zostało jeszcze przesłane i musimy poczekać, po czym znowu spróbować skopiować adres.
 ![](https://i.imgur.com/THQIVYv.png)
 
 ## Dodawanie zdjęcia na VIshop
