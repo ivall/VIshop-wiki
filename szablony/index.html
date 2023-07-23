@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.743259234104">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.743435763247">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Szablony</title>
     <meta name="title" content="Szablony">
-    <meta name="description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy" />
+    <meta name="description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://wiki.vishop.pl/szablony/" />
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="og:title" content="Szablony">
-    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy">
+    <meta property="og:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.vishop.pl/szablony/">
     <meta property="twitter:title" content="Szablony">
-    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy">
+    <meta property="twitter:description" content="VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=3.0.3.743259234104" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=3.0.3.743435763247" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=3.0.3.743259234104" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=3.0.3.743435763247" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=3.0.3.743259234104" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=3.0.3.743435763247" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -179,8 +179,8 @@
         <span>Szablony</span>
     </h1>
 </doc-anchor-target>
-<p>VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy
-w dowolny sposób go edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.</p>
+<p>VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są
+po stronie klienta i można je w pełni edytować. Dostępne szablony znajdziesz w zakładce Szablony w panelu VIshop.</p>
 <doc-anchor-target id="konfiguracja">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja">#</doc-anchor-trigger>
@@ -193,7 +193,7 @@ w dowolny sposób go edytować. Aktualnie dostępny jest tylko jeden szablon, kt
         <span>Konfiguracja szablonu</span>
     </h3>
 </doc-anchor-target>
-<p>Pobieramy szablon z panelu VIshop z zakładki &quot;Szablony&quot;. Otwieramy plik <code v-pre>nuxt.config.js</code> i dostosowujemy podstawowe
+<p>Pobieramy wybrany szablon z panelu VIshop z zakładki &quot;Szablony&quot;. Otwieramy plik <code v-pre>nuxt.config.js</code> i dostosowujemy podstawowe
 ustawienia pod siebie zgodnie z ich opisem.</p>
 <doc-anchor-target id="zmiana-zdjęć">
     <h3>
@@ -201,25 +201,9 @@ ustawienia pod siebie zgodnie z ich opisem.</p>
         <span>Zmiana zdjęć</span>
     </h3>
 </doc-anchor-target>
-<p>Aby zmienić tło strony głównej wystarczy wejść w folder <code v-pre>assets</code> i podmienić plik <code v-pre>background.jpg</code> na swój z taką samą
-nazwą i tym samym rozszerzeniem.</p>
+<p>Zdjęcia możemy podmieniać w folderze &quot;assets&quot;.</p>
 <p>W celu zmiany ikony strony przechodzimy do folderu <code v-pre>static</code> i podmieniamy plik o nazwie <code v-pre>favicon.ico</code> na swój z taką samą
 nazwą.</p>
-<doc-anchor-target id="logo-na-stronie-głównej">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#logo-na-stronie-głównej">#</doc-anchor-trigger>
-        <span>Logo na stronie głównej</span>
-    </h3>
-</doc-anchor-target>
-<p>Szablon posiada łatwą możliwość dodania logo (lub dowolnej innej treści jak np. iframe youtube) na stronie głównej po
-prawej stronie. Wystarczy przejść do pliku <code v-pre>pages/index.vue</code> i odkomentować linijkę kodu w której jest tekst &quot;logo serwera&quot;.</p>
-<doc-anchor-target id="ikony-w-stopce">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ikony-w-stopce">#</doc-anchor-trigger>
-        <span>Ikony w stopce</span>
-    </h3>
-</doc-anchor-target>
-<p>Należy przejść do pliku <code v-pre>components/Footer.vue</code> i pododawać ikony w podanym miejscu według istniejącego już schematu.</p>
 <doc-anchor-target id="instalacja-szablonu">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja-szablonu">#</doc-anchor-trigger>
