@@ -2,27 +2,19 @@
 icon: paintbrush
 ---
 # Szablony
-VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymujemy na własnym serwerze i możemy
-w dowolny sposób go edytować. Aktualnie dostępny jest tylko jeden szablon, który znajdziesz w zakładce Szablony w panelu VIshop.
+VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są
+po stronie klienta i można je w pełni edytować. Dostępne szablony znajdziesz w zakładce Szablony w panelu VIshop.
 
 ## Konfiguracja
 ### Konfiguracja szablonu
-Pobieramy szablon z panelu VIshop z zakładki "Szablony". Otwieramy plik `nuxt.config.js` i dostosowujemy podstawowe 
+Pobieramy wybrany szablon z panelu VIshop z zakładki "Szablony". Otwieramy plik `nuxt.config.js` i dostosowujemy podstawowe 
 ustawienia pod siebie zgodnie z ich opisem.
 
 ### Zmiana zdjęć
-Aby zmienić tło strony głównej wystarczy wejść w folder `assets` i podmienić plik `background.jpg` na swój z taką samą
-nazwą i tym samym rozszerzeniem.
+Zdjęcia możemy podmieniać w folderze "assets".
 
 W celu zmiany ikony strony przechodzimy do folderu `static` i podmieniamy plik o nazwie `favicon.ico` na swój z taką samą
 nazwą.
-
-### Logo na stronie głównej
-Szablon posiada łatwą możliwość dodania logo (lub dowolnej innej treści jak np. iframe youtube) na stronie głównej po 
-prawej stronie. Wystarczy przejść do pliku `pages/index.vue` i odkomentować linijkę kodu w której jest tekst "logo serwera".
-
-### Ikony w stopce
-Należy przejść do pliku `components/Footer.vue` i pododawać ikony w podanym miejscu według istniejącego już schematu.
 
 ## Instalacja szablonu
 Do poprawnego działania szablonu wymagana jest:
