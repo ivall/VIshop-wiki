@@ -18,11 +18,11 @@ nazwą.
 
 ## Instalacja szablonu
 Do poprawnego działania szablonu wymagana jest:
-- obsługa node.js w wersji do 12 - 16
-- serwer WWW (zalecamy nginx - w tym poradniku zostanie on wykorzystany)
+- obsługa node.js w wersji do 12 - 14
+- serwer WWW (polecamy nginx - w tym poradniku zostanie on wykorzystany)
 
 Szablon będzie działał na:
-- virtual private server (Potocznie zwanym serwerze VPS)
+- VPS
 - serwerze dedykowanym
 - hostingu z obsługą node.js
 
