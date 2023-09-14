@@ -3,7 +3,7 @@ icon: paintbrush
 ---
 # Szablony
 VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są
-po stronie klienta. Dzięki temu, że mamy dostęp do wszystkich plików, możemy dowolnie edytować wygląd strony. Dostępne szablony znajdziesz w zakładce Szablony w panelu VIshop. Jednak musimy pamięć o tym, aby samemu utrzymywać szablon na własnym serwerze. Jeżeli nie posiadasz serwera dedykowanego lub VPS, możesz skorzystać z gotowego rozwiązania przygotowanego specjalnie pod szablony VIshop, jakim jest hosting [szablony.tems.pl](https://szablony.tems.pl) (7zł/msc).
+po stronie klienta i można je w pełni edytować. Dostępne szablony znajdziesz w zakładce `Szablony` w panelu VIshop. Istnieje również możliwość odpłatego, prostego hostowania szablów na [szablony.tems.pl](https://szablony.tems.pl).
 
 ## Konfiguracja
 ### Konfiguracja szablonu
