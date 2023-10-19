@@ -22,12 +22,12 @@ Na ten moment obsługujemy HotPay, CashBill, Paybylink, PayPal, MicroSMS, SimPay
 
 Dziękujemy <a href="https://patryqhyper.pl" target="_blank" rel="nofollow noopener">Patrykowi Vizauer</a> za pomoc z integracją płatności ( ͡° ͜ʖ ͡°)
 
-### Czy potrzebuję działalność gospodarczą by mieć własny itemshop?
+### Czy potrzebuję działalność gospodarczą, by mieć własny itemshop?
 Nie, wystarczy działalność nierejestrowana.
 
 
 ### Jak dodać płatności PSC bez działalności gospodarczej?
-Możesz użyć operatora IceHost. W takim przypadku pieniądze idą do wirtualnego portfela, a później możemy je sprzedać innym użytkownikom.
+Możesz użyć operatora IceHost lub SkillHost. W takim przypadku pieniądze idą do wirtualnego portfela, a później możemy je sprzedać innym użytkownikom.
 
 
 ### Dlaczego dostaję pieniądze, a gracze nie otrzymują zakupionych usług?
