@@ -13,19 +13,19 @@ Następnie dodajemy plugin na nasz serwer Minecraft. Po dodaniu pluginu na serwe
 ## Konfiguracja
 Nieskonfigurowany plugin będzie wyświetlał się na czerwono w liście pluginów. Do poprawnego działania musimy skonfigurować plugin.
 
-W folderze plugins przechodzimy do folderu ViShopPlugin, a następnie otwieramy plik config.yml. Znajdują się tam trzy
+W folderze `plugins` przechodzimy do folderu `ViShopPlugin`, a następnie otwieramy plik `config.yml`. Znajdują się tam trzy
 zmienne, które musimy uzupełnić.
 
 Nazwa pola   | Wymagana wartość pola
 ---    | ---
-apiKey | Klucz api, który znajduje się w panelu VIshop, w zakładce ustawienia.
+apiKey | Klucz API, który znajduje się w panelu VIshop, w zakładce ustawienia.
 shopId | ID sklepu, znajdziesz je w głównej zakładce panelu VIshop.
 serverId | ID serwera, znajduje się w panelu VIshop, w zakładce serwery.
 
-Po skonfigurowaniu pluginu zapisujemy plik config.yml i **restartujemy serwer**.
+Po skonfigurowaniu pluginu zapisujemy plik `config.yml` i **restartujemy serwer**.
 
 !!!warning Restart serwera
-Bardzo ważne jest, aby serwer został zrestartowany. Nie używamy do tego komendy /reload, ani innych pluginów
+Bardzo ważne jest, aby serwer został zrestartowany. Nie używamy do tego komendy `/reload`, ani innych pluginów
 odpowiedzialnych za "restartowanie" serwera.
 !!!
 
