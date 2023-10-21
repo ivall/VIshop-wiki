@@ -6,7 +6,7 @@ icon: repo
 
 ## Konfiguracja
 ### Zmiana trybu z sandbox na live
-Pierwszym krokiem jest przejście do [panelu dewelopera PayPal](https://developer.paypal.com/dashboard/) i zalogowanie się.
+Pierwszym krokiem jest przejście do [panelu developera PayPal](https://developer.paypal.com/dashboard/) i zalogowanie się.
 Następnie w prawym górnym rogu przełączamy suwak z **Sandbox** na **Live** i klikamy **Upgrade Now** (jeżeli nam wyskoczy taka opcja). 
 Teraz zostaliśmy przekierowani na kolejną stronę, wybieramy interesującą nas opcję dot. e-mail. Teraz wybieramy opcję
 **"Rozszerz swoje Konto"**. Teraz uzupełniamy pola tekstowe:
