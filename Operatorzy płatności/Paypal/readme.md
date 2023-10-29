@@ -9,7 +9,7 @@ icon: repo
 Pierwszym krokiem jest przejście do [panelu developera PayPal](https://developer.paypal.com/dashboard/) i zalogowanie się.
 Następnie w prawym górnym rogu przełączamy suwak z **Sandbox** na **Live** i klikamy **Upgrade Now** (jeżeli nam wyskoczy taka opcja). 
 Teraz zostaliśmy przekierowani na kolejną stronę, wybieramy interesującą nas opcję dot. e-mail. Teraz wybieramy opcję
-**"Rozszerz Swoje Konto"**. Teraz uzupełniamy pola tekstowe:
+**"Rozszerz swoje Konto"**. Teraz uzupełniamy pola tekstowe:
 - oficjalna nazwa firmy - jeżeli prowadzimy działalność nierejestrowaną to wpisujemy "imię nazwisko działalność nierejestrowana"
 - swój numer telefonu
 - uzupełniamy swój adres zamieszkania 
@@ -29,4 +29,4 @@ Teraz w panelu PayPal zjeżdżamy niżej i klikamy "**Add Webhook**". W polu "**
 z panelu VIshop, ma on w sobie słowo "**webhooks**". W "**Event Types**" zaznaczamy "**All Events**" (możemy pojedynczo powybierać 
 potrzebne, ale tak będzie prościej ;)). Teraz nasz "**Webhook ID**" z panelu PayPal kopiujemy i wklejamy w polu "**ID webhooka**".
 
-:tada: Jeżeli poprawnie wykonałeś wszystkie kroki to płatność PayPal w twoim Itemshopie powinna działać.
+:tada: Jeżeli poprawnie wykonałeś wszystkie kroki to płatność PayPal w Twoim itemshopie powinna działać.

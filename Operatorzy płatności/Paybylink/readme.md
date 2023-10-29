@@ -22,7 +22,7 @@ Nazwa odbiorcy | Nazwa, która będzie wyświetlała się kupującym, np. supers
 
 Po dodaniu nowego sklepu należy poczekać zazwyczaj do 2-3 dni roboczych na zweryfikowanie sklepu przez obsługę Paybylink.
 Zweryfikowany sklep, który będzie gotowy do działania będzie posiadał plakietkę "AKTYWNA".
-## Konfiguracji usługi
+## Konfiguracja usługi
 Przechodzimy do panelu VIshop, do zakładki "Operatorzy płatności" i dodajemy nowego. Wybieramy Paybylink Przelewy, w polu "Sekret"
 wpisujemy Hash z usługi stworzonej w serwisie Paybylink. W "Id serwisu" podajemy ID naszej usługi (znajduje się pod nazwą usługi) z panelu Paybylink.
 Po uzupełnieniu formularzu dodawania operatora na VIshop dodajemy operatora i ustawiamy ceny produktów dla danego operatora.
