@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751922508120">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.753126944613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.5.0.751922508120" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.753126944613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.751922508120" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.753126944613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.751922508120" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.753126944613" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -176,21 +176,27 @@
         <span>Plugin VIshop</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="instalacja">
+<doc-anchor-target id="minecraft">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minecraft">#</doc-anchor-trigger>
+        <span>Minecraft</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="instalacja">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#instalacja">#</doc-anchor-trigger>
         <span>Instalacja</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Pobieramy najnowszą wersję pluginu z <a href="https://github.com/ivall/VIshop-plugin/releases">tej strony</a>.
 Dokładne informacje na temat wspieranych przez plugin wersji i silników dostępne sa w ReadME pluginu, które możesz
 sprawdzić <a href="https://github.com/ivall/VIshop-plugin/blob/main/README.md">tutaj</a>.<br />
 Następnie dodajemy plugin na nasz serwer Minecraft. Po dodaniu pluginu na serwer należy <strong>zrestartować serwer</strong>.</p>
 <doc-anchor-target id="konfiguracja">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja">#</doc-anchor-trigger>
         <span>Konfiguracja</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Nieskonfigurowany plugin będzie wyświetlał się na czerwono w liście pluginów. Do poprawnego działania musimy skonfigurować plugin.</p>
 <p>W folderze <code v-pre>plugins</code> przechodzimy do folderu <code v-pre>ViShopPlugin</code>, a następnie otwieramy plik <code v-pre>config.yml</code>. Znajdują się tam trzy
@@ -239,23 +245,80 @@ odpowiedzialnych za &quot;restartowanie&quot; serwera.</p>
     </div>
 </div>
 <doc-anchor-target id="testowanie-pluginu">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testowanie-pluginu">#</doc-anchor-trigger>
         <span>Testowanie pluginu</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>W celu przetestowania pluginu należy wygenerować voucher w sklepie i go wykorzystać. Jeżeli w produkcie, dla którego został
 wygenerowany voucher jest zaznaczony wymóg bycia online to gracz z podanym w realizacji vouchera nickiem musi być na serwerze.
 Po zrealizowaniu vouchera status transakcji zmieni się na wykonywanie, a następnie po maksymalnie 30 sekundach na wykonano.
 Jeżeli tak się nie stało oznacza to, że plugin VIshop nie działa poprawnie.</p>
 <doc-anchor-target id="naprawianie-pluginu">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#naprawianie-pluginu">#</doc-anchor-trigger>
         <span>Naprawianie pluginu</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>W przypadku, gdy plugin nie działa poprawnie to w konsoli pokazują się odpowiednie komunikaty. Komunikaty te znajdują się
 również w logach serwera. Należy poprawić konfigurację pluginu.</p>
+<doc-anchor-target id="fivem">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fivem">#</doc-anchor-trigger>
+        <span>FiveM</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="dodawanie-skryptu">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dodawanie-skryptu">#</doc-anchor-trigger>
+        <span>Dodawanie skryptu</span>
+    </h3>
+</doc-anchor-target>
+<p>Skrypt pobierzesz z <a href="https://github.com/ivall/VIshopPluginFivem">tego miejsca</a>. W celu dodania skryptu w folderze resources
+swojego serwera umieść folder vishop zawierający plik server.lua itd.</p>
+<doc-anchor-target id="konfiguracja-pluginu">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-pluginu">#</doc-anchor-trigger>
+        <span>Konfiguracja pluginu</span>
+    </h3>
+</doc-anchor-target>
+<p>Do poprawnego działania pluginu wymagane jest jego poprawne skonfigurowanie. W tym celu otwórz plik config.lua i uzupełnij
+pola według podanej w pliku instrukcji.</p>
+<doc-anchor-target id="wsparcie-steam">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wsparcie-steam">#</doc-anchor-trigger>
+        <span>Wsparcie Steam</span>
+    </h3>
+</doc-anchor-target>
+<p>VIshop do poprawnego działania <strong>wymaga używania Steam przez graczy</strong>. Każdy gracz <strong>musi</strong> mieć dostępny identyfikator Steam
+podczas wchodzenia na serwer i gry na nim.</p>
+<p>W tym celu przejdź do pliku konfiguracyjnego swojego serwera (server.cfg) i uzupełnij pole <code v-pre>steam_webApiKey</code> według podanej
+instrukcji. Zalecane jest również użycie skryptu, który zablokuje graczy niekorzystających ze Steam.</p>
+<doc-anchor-target id="baza-danych">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#baza-danych">#</doc-anchor-trigger>
+        <span>Baza danych</span>
+    </h3>
+</doc-anchor-target>
+<p>Skrypt VIshop korzysta z <a href="https://github.com/brouznouf/fivem-mysql-async">fivem-mysql-async</a>. Pobierz fivem-mysql-async, a
+następnie utwórz folder [essential] w resources, w nim umieść folder fivem-mysql-async i zmień nazwę folderu na mysql-async.</p>
+<p>Następnie utwórz bazę danych MySQL i uruchom w niej plik database.sql w celu stworzenia tabeli
+wykorzystywanej przez skrypt VIshop.</p>
+<p>Przejdź teraz do pliku konfiguracyjnego server.cfg i dopisz do niego poniższy kod zmieniając dane do połączenie się do bazy danych.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">set mysql_connection_string &quot;server=ADRES_POLACZENIA;database=NAZWA_BAZY;userid=NAZWA_UZYTKOWNIKA;password=HASLO&quot; 
+set mysql_debug 1
+set mysql_debug_output &quot;console&quot;
+ensure mysql-async</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="identyfikatory">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#identyfikatory">#</doc-anchor-trigger>
+        <span>Identyfikatory</span>
+    </h3>
+</doc-anchor-target>
+<p>Skrypt VIshop udostępnia 2 identyfikatory, steam oraz license podawane w formacie z prefixem (np. steam:xxxxxxxxx). Placeholdery
+z identyfikatorami znajdziesz w polu z komendami w okienku dodawania produktu, tam też ich użyj.</p>
 
                                 
                                 <!-- Required only on API pages -->
