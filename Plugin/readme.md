@@ -70,8 +70,6 @@ wykorzystywanej przez skrypt VIshop.
 Przejdź teraz do pliku konfiguracyjnego server.cfg i dopisz do niego poniższy kod zmieniając dane do połączenie się do bazy danych.
 ```
 set mysql_connection_string "server=ADRES_POLACZENIA;database=NAZWA_BAZY;userid=NAZWA_UZYTKOWNIKA;password=HASLO" 
-set mysql_debug 1
-set mysql_debug_output "console"
 ensure mysql-async
 ```
 
