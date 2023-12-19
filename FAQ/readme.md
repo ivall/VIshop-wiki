@@ -18,7 +18,7 @@ Jest to możliwe tylko dla sklepów premium, jeżeli nie posiadasz premium, moż
 
 
 ### Jakich operatorów obsługuje VIshop
-Na ten moment obsługujemy HotPay, CashBill, Paybylink, PayPal, MicroSMS, SimPay, IceHost oraz SkillHost.
+Lista dostępnych operatorów znajduje się na stronie głównej oraz w panelu w zakładce operatorzy płatności.
 
 Dziękujemy <a href="https://patryqhyper.pl" target="_blank" rel="nofollow noopener">Patrykowi Vizauer</a> za pomoc z integracją płatności ( ͡° ͜ʖ ͡°)
 
