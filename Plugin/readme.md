@@ -43,6 +43,11 @@ Jeżeli tak się nie stało oznacza to, że plugin VIshop nie działa poprawnie.
 W przypadku, gdy plugin nie działa poprawnie to w konsoli pokazują się odpowiednie komunikaty. Komunikaty te znajdują się 
 również w logach serwera. Należy poprawić konfigurację pluginu.
 
+### Itemshop w GUI
+
+Zachęcamy również do użycia pluginu [VIshopGUI](https://www.spigotmc.org/resources/vishopgui.116786/), który umożliwia stworzenie itemshopu w GUI. 
+Do działania wymagane jest premium.
+
 ## FiveM
 
 ### Dodawanie skryptu
