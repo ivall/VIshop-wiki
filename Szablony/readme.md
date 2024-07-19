@@ -20,7 +20,7 @@ nazwą.
 
 ## Instalacja szablonu
 Do poprawnego działania szablonu wymagana jest:
-- obsługa node.js w wersji do 12 - 14
+- **obsługa node.js w wersji do 12 - 14**
 - serwer WWW (polecamy nginx - w tym poradniku zostanie on wykorzystany)
 
 Szablon będzie działał na:
@@ -64,7 +64,7 @@ Poniższy poradnik został zrealizowany na ubuntu 20.04.
 Jeżeli nie mamy zainstalowanego node.js lub npm na serwerze to musimy zainstalować. Najpierw wpisujemy polecenie
 `apt-get update`, a następnie pobieramy node oraz npm poprzez polecenia:
 
-`curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -`  
+`curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`  
 `sudo apt -y install nodejs`  
 `sudo apt install npm`
 
@@ -110,7 +110,7 @@ Zapisujemy i wychodzimy (ctrl+s, a później ctrl+x).
 Uruchamiamy nasz serwer nginx za pomocą polecenia - `sudo systemctl start nginx` / bądź restartujemy jeżeli takowy serwer już działa - `sudo systemctl restart nginx`
 
 ## Uruchomienie lokalnie jako dev
-Wymagana jest wersja node 12 - 16. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
+Wymagana jest wersja **node.js 12 - 14**. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
 i wpisać `npm install`, a następnie `npm run dev`. Teraz nasz szablon jest uruchomiony w trybie dev i mamy hot reload, można
 teraz z łatwością edytować stronę mając podgląd na żywo.
 
