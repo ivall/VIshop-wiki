@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773853654524">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774706631555">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.5.0.773853654524" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.774706631555" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.773853654524" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.774706631555" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.773853654524" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.774706631555" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -210,7 +210,7 @@ nazwą.</p>
 </doc-anchor-target>
 <p>Do poprawnego działania szablonu wymagana jest:</p>
 <ul>
-<li>obsługa node.js w wersji do 12 - 14</li>
+<li><strong>obsługa node.js w wersji do 12 - 14</strong></li>
 <li>serwer WWW (polecamy nginx - w tym poradniku zostanie on wykorzystany)</li>
 </ul>
 <p>Szablon będzie działał na:</p>
@@ -284,7 +284,7 @@ W ten sposób nasza aplikacja zostanie zrestartowana i zmiany zostaną wgrane.</
 </doc-anchor-target>
 <p>Jeżeli nie mamy zainstalowanego node.js lub npm na serwerze to musimy zainstalować. Najpierw wpisujemy polecenie
 <code v-pre>apt-get update</code>, a następnie pobieramy node oraz npm poprzez polecenia:</p>
-<p><code v-pre>curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -</code><br />
+<p><code v-pre>curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -</code><br />
 <code v-pre>sudo apt -y install nodejs</code><br />
 <code v-pre>sudo apt install npm</code></p>
 <doc-anchor-target id="wgrywanie-szablonu-1">
@@ -342,7 +342,7 @@ Uruchamiamy nasz serwer nginx za pomocą polecenia - <code v-pre>sudo systemctl 
         <span>Uruchomienie lokalnie jako dev</span>
     </h2>
 </doc-anchor-target>
-<p>Wymagana jest wersja node 12 - 16. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
+<p>Wymagana jest wersja <strong>node.js 12 - 14</strong>. Jeżeli mamy już node w takiej wersji to wystarczy pobrać szablon, wejść do niego
 i wpisać <code v-pre>npm install</code>, a następnie <code v-pre>npm run dev</code>. Teraz nasz szablon jest uruchomiony w trybie dev i mamy hot reload, można
 teraz z łatwością edytować stronę mając podgląd na żywo.</p>
 <p>Po zakończeniu edycji szablon instalujemy tak jak normalnie (patrz wyżej).</p>
