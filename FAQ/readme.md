@@ -27,7 +27,7 @@ Nie, wystarczy działalność nierejestrowana.
 
 
 ### Jak dodać płatności PSC bez działalności gospodarczej?
-Możesz użyć operatora IceHost lub SkillHost. W takim przypadku pieniądze idą do wirtualnego portfela, a później możemy je sprzedać innym użytkownikom.
+Możesz użyć operatora IVhost. W takim przypadku pieniądze idą do wirtualnego portfela, a później możemy je sprzedać innym użytkownikom.
 
 
 ### Dlaczego dostaję pieniądze, a gracze nie otrzymują zakupionych usług?

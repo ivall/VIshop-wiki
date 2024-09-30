@@ -24,7 +24,7 @@ Do poprawnego działania szablonu wymagana jest:
 - serwer WWW (polecamy nginx - w tym poradniku zostanie on wykorzystany)
 
 Szablon będzie działał na:
-- VPS
+- VPS (sprawdź polecany [hosting VPS](https://ivhost.pl))
 - serwerze dedykowanym
 - hostingu z obsługą node.js
 
