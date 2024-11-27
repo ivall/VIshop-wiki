@@ -4,6 +4,10 @@ icon: book
 
 # Podpinanie domeny
 
+!!!info
+Zachęcamy do zakupu domeny na [IVhost.pl](https://ivhost.pl) (możliwość płatności PSC).
+!!!
+
 ## Konfiguracja domeny w panelu VIshop
 W celu podpięcia domeny udaj się do ustawień sklepu, gdzie znajdziesz pole podpisane jako "Własna domena" i wpisz tam swoją
 domenę, po czym kliknij przycisk "zapisz". 
