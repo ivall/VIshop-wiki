@@ -16,9 +16,9 @@ Przechodzimy do zakładki "Przelewy internetowe", wybieramy "Sklepy" i klikamy "
 
 Nazwa pola   | Co wpisać
 ---    | ---
-Strona internetowa | Adres naszej strony internetowej pod którą będzie prowadzona sprzedaż usług (np. sklep.superserwer123.pl)
+Strona internetowa | Adres naszej strony internetowej pod którą będzie prowadzona sprzedaż usług (np. sklep.serwer.pl)
 Adres regulaminu | Link do regulaminu płatności, który będzie obowiązywał na stronie. W regulaminie muszą być takie informacje jak m.in. właściciel sklepu, informacje o zwrotach, informacje o pośredniku płatności.
-Nazwa odbiorcy | Nazwa, która będzie wyświetlała się kupującym, np. superserwer123
+Nazwa odbiorcy | Nazwa, która będzie wyświetlała się kupującym, np. serwer
 
 Po dodaniu nowego sklepu należy poczekać zazwyczaj do 2-3 dni roboczych na zweryfikowanie sklepu przez obsługę Paybylink.
 Zweryfikowany sklep, który będzie gotowy do działania będzie posiadał plakietkę "AKTYWNA".
