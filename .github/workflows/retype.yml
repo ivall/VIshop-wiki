@@ -1,4 +1,4 @@
-name: Publish Retype powered website to GitHub Pages
+name: Publish wiki to GitHub Pages
 on:
   workflow_dispatch:
   push:
@@ -11,8 +11,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: retypeapp/action-build@latest
 
