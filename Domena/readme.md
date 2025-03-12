@@ -15,7 +15,7 @@ domenę, po czym kliknij przycisk "zapisz".
 Tylko Cloudflare umożliwia podpięcie domeny w postaci domena.pl. Inni operatorzy domen wymagają podania subdomeny
 np. sklep.domena.pl. Przeniesienie domeny na Cloudflare jest darmowe, proste i szybkie ale nie jest wymagane.
 !!!
-![](https://i.imgur.com/3uT01E3.png)
+![](https://i.imgur.com/vVtngrZ.png)
 ## Konfiguracja domeny na Cloudflare
 Następnie wejdź na panel Cloudflare, wybierz swoją domenę i przejdź do sekcji DNS. 
 Utwórz nowy rekord typu CNAME i ustaw target na `vishop.pl`, nazwa rekordu powinna być taka jest w panelu VIshop.
