@@ -5,7 +5,7 @@ order: -1
 # Konfiguracja Dpay
 ## Zakładanie konta
 Aby skorzystać z operatora Dpay najpierw musimy założyć konto - zrobimy to na stronie dpay.pl. Po rejestracji musimy zweryfikować
-nasze konto wysyłając przelew w celu zweryfikowania podanych danych, pełne informacje znajdziesz w panelu Paybylink. Wymagana
+nasze konto wysyłając przelew w celu zweryfikowania podanych danych, pełne informacje znajdziesz w panelu Dpay. Wymagana
 jest również weryfikacja dowodu osobistego w Dpay.
 
 ## Dodawanie usługi
