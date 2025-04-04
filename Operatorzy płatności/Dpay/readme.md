@@ -19,7 +19,7 @@ który będzie gotowy do działania będzie posiadał status "Aktywny" w liście
 
 ## Konfiguracja usługi
 Przechodzimy do panelu VIshop, do zakładki "Operatorzy płatności" i dodajemy nowego. Wybieramy Dpay, w polu "Sekret"
-wpisujemy Hash z serwisu utworzonego z Dpay, znajduje się on w panelu Dpay w serwisie. W polsu "Nazwa serwisu" podajemy 
+wpisujemy Hash z serwisu utworzonego z Dpay, znajduje się on w panelu Dpay w serwisie. W polu "Nazwa serwisu" podajemy 
 natomiast nazwę serwisu z panelu Dpay.
 
 Po uzupełnieniu formularzu dodawania operatora na VIshop dodajemy operatora i ustawiamy ceny produktów dla danego operatora.
