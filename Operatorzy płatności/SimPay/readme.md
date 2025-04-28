@@ -1,7 +1,7 @@
 ---
 icon: repo
 ---
-# Konfiguracja SimPay.pl
+# Konfiguracja SimPay
 
 SimPay.pl to nowoczesny operator płatności umożliwiający przyjmowanie płatności przez Przelewy online, BLIK, PayPal, Skrill, PaySafeCard, SMS Premium oraz Direct Billing (SMS+).
 
@@ -32,8 +32,6 @@ Uzupełnij dane jak poniżej:
 
 Skopiuj URL notyfikacji i wklej go do miejsca zaznaczonego czerwonym kolorem na obrazku w kroku 2.
 ![Krok 4](https://i.imgur.com/eDeeGQe.png)
-
-#### Pamiętaj, żeby po dodaniu operatora w Vishop ustawić ceny w każdym produkcie.
 
 ### PaysafeCard, Direct Billing i SMS Premium
 PaysafeCard, Direct Billing oraz SMS Premium wymagają posiadania zarejestrowanej działalności gospodarczej/spółki.

@@ -22,10 +22,6 @@ Lista dostępnych operatorów znajduje się na stronie głównej oraz w panelu w
 
 Dziękujemy <a href="https://patryqhyper.pl" target="_blank" rel="nofollow noopener">Patrykowi Vizauer</a> za pomoc z integracją płatności ( ͡° ͜ʖ ͡°)
 
-### Czy potrzebuję działalność gospodarczą, by mieć własny itemshop?
-Nie, wystarczy działalność nierejestrowana.
-
-
 ### Jak dodać płatności PSC bez działalności gospodarczej?
 Możesz użyć operatora IVhost. W takim przypadku pieniądze idą do wirtualnego portfela, a później możemy je sprzedać innym użytkownikom.
 
