@@ -3,7 +3,7 @@ icon: repo
 ---
 # Konfiguracja CashBill
 ## Zakładanie konta
-Aby skorzystać z operatora Paybylink najpierw musimy założyć konto - robimy to używając <a href=https://panel.cashbill.pl/aff/ivsystems rel="nofollow">tego linku</a>.
+Aby skorzystać z operatora CashBill najpierw musimy założyć konto - robimy to używając <a href=https://panel.cashbill.pl/aff/ivsystems rel="nofollow">tego linku</a>.
 Jeżeli prowadzimy działalność nierejestrowaną, to w polu NIP wpisujemy 10 zer, w REGION wpisujemy 9 zer, a w nazwie firmy
 "imię nazwisko działalność nierejestrowana".
 
