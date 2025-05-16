@@ -48,6 +48,10 @@ również w logach serwera. Należy poprawić konfigurację pluginu.
 Zachęcamy również do użycia pluginu [VIshopGUI](https://www.spigotmc.org/resources/vishopgui.116786/), który umożliwia stworzenie itemshopu w GUI. 
 Do działania wymagane jest premium.
 
+### Placeholdery
+
+Dostępny jest również darmowy plugin z placeholderami z widżetów - [VIshopPlaceholders](https://www.spigotmc.org/resources/vishopplaceholders.125089/).
+
 ## FiveM
 
 ### Dodawanie skryptu
