@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809626732124">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.816553270470">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../static/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.11.0.809626732124" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.11.0.816553270470" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.809626732124" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.816553270470" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.809626732124" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.816553270470" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -223,10 +223,10 @@ Na przykład, gdy w panelu VIshop wpiszemy <code v-pre>domena.pl</code> to nazw�
     <figcaption class="caption"></figcaption>
 </figure>
 <span class="docs-emoji">&#x1F389;</span> Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu kilku minut.</p>
-<doc-anchor-target id="konfiguracja-domeny-na-ovh-i-innych-stronach">
+<doc-anchor-target id="konfiguracja-domeny-na-ovh">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-domeny-na-ovh-i-innych-stronach">#</doc-anchor-trigger>
-        <span>Konfiguracja domeny na OVH i innych stronach</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-domeny-na-ovh">#</doc-anchor-trigger>
+        <span>Konfiguracja domeny na OVH</span>
     </h2>
 </doc-anchor-target>
 <doc-anchor-target id="tworzenie-rekordu-cname">
@@ -256,7 +256,43 @@ Wartość rekordu ustaw również na tą z panelu, którą otrzymałeś po klikn
     <img src="https://i.imgur.com/km0zJQB.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
-<span class="docs-emoji">&#x1F389;</span> Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu maksymalnie godziny.</p>
+</p>
+<doc-anchor-target id="konfiguracja-domeny-na-home">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konfiguracja-domeny-na-home">#</doc-anchor-trigger>
+        <span>Konfiguracja domeny na Home</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="rekord-cname">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rekord-cname">#</doc-anchor-trigger>
+        <span>Rekord CNAME</span>
+    </h3>
+</doc-anchor-target>
+<p>Przejdź do panelu Home do listy domen, przy wybranej domenie kliknij działania -&gt; zarządzanie rekordami DNS. Teraz kliknij
+dodaj nowy rekord, type rekordu ustaw na CNAME. W polu nazwa kanoniczna <code v-pre>vishop.pl.</code> (kropka na końcu musi być), a w polu host
+wpisz taką samą subdomenę jaką podałeś w panelu VIshop ale bez domeny, czyli jeżeli w VIshop wpisałeś np. <code v-pre>sklep.ivsystems.pl</code> to w
+polu host wpisz samo sklep.
+<figure class="content-center">
+    <img src="https://i.imgur.com/7H9ouxn.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="rekord-txt">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rekord-txt">#</doc-anchor-trigger>
+        <span>Rekord TXT</span>
+    </h3>
+</doc-anchor-target>
+<p>Po utworzeniu rekordu CNAME przejdź do panelu VIshop, do zakładki ustawienia i kliknij <code v-pre>pokaż rekordy txt</code>. Teraz wróć do
+zarządzania DNSami w Home i utwórz nowy rekord typu TXT. Wartość tekstową rekordu ustaw na tą z panelu VIshop, którą otrzymałeś po kliknięciu przycisku.
+W polu host wpisz również to co otrzymałeś w panelu VIshop podane jako nazwa usuwając z tej nazwy samą domenę (np. ivsystems.pl).
+<figure class="content-center">
+    <img src="https://i.imgur.com/DellR2f.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p><span class="docs-emoji">&#x1F389;</span> Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu maksymalnie godziny.</p>
 
                                 
                                 <!-- Required only on API pages -->
