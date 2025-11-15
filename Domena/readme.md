@@ -18,7 +18,7 @@ Utwórz nowy rekord typu CNAME i ustaw target na `vishop.pl`, nazwa rekordu powi
 Na przykład, gdy w panelu VIshop wpiszemy `domena.pl` to nazwą rekordu CNAME jest `domena.pl`.
 ![](https://i.imgur.com/9BkBjEg.png)
 :tada: Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu kilku minut.
-## Konfiguracja domeny na OVH i innych stronach
+## Konfiguracja domeny na OVH
 ### Tworzenie rekordu CNAME
 Przejdź do panelu operatora (w tym przypadku OVH), u którego posiadasz domenę i wybierz swoją domenę. Następnie przejdź
 do zakładki DNS (Strefa DNS). Dodaj nowy rekord typu CNAME, jego nazwa musi być taka sama jak domena podana w panelu VIshop.
@@ -29,4 +29,17 @@ Po utworzeniu rekordu CNAME przejdź do panelu VIshop, do zakładki ustawienia i
 panelu operatora i utwórz nowy rekord typu TXT o nazwie otrzymanej w panelu (zwróć uwagę czy domena nie zduplikuje się).
 Wartość rekordu ustaw również na tą z panelu, którą otrzymałeś po kliknięciu przycisku.
 ![](https://i.imgur.com/km0zJQB.png)
+## Konfiguracja domeny na Home
+### Rekord CNAME
+Przejdź do panelu Home do listy domen, przy wybranej domenie kliknij działania -> zarządzanie rekordami DNS. Teraz kliknij
+dodaj nowy rekord, type rekordu ustaw na CNAME. W polu nazwa kanoniczna `vishop.pl.` (kropka na końcu musi być), a w polu host
+wpisz taką samą subdomenę jaką podałeś w panelu VIshop ale bez domeny, czyli jeżeli w VIshop wpisałeś np. `sklep.ivsystems.pl` to w
+polu host wpisz samo sklep.
+![](https://i.imgur.com/7H9ouxn.png)
+### Rekord TXT
+Po utworzeniu rekordu CNAME przejdź do panelu VIshop, do zakładki ustawienia i kliknij `pokaż rekordy txt`. Teraz wróć do
+zarządzania DNSami w Home i utwórz nowy rekord typu TXT. Wartość tekstową rekordu ustaw na tą z panelu VIshop, którą otrzymałeś po kliknięciu przycisku. 
+W polu host wpisz również to co otrzymałeś w panelu VIshop podane jako nazwa usuwając z tej nazwy samą domenę (np. ivsystems.pl).
+![](https://i.imgur.com/DellR2f.png)
+
 :tada: Jeżeli poprawnie wykonałeś wszystkie kroki to domena zacznie działać w ciągu maksymalnie godziny.
