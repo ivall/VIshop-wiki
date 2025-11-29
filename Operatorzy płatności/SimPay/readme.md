@@ -31,6 +31,7 @@ Uzupełnij dane jak poniżej:
 - Hasło notyfikacji: Wartość z pola "Hasło / Bearer Token"
 
 Skopiuj URL notyfikacji i wklej go do miejsca zaznaczonego czerwonym kolorem na obrazku w kroku 2.
+Upewnij się również, że pole "Wersja IPN" jest ustawiona na V2. (w ustawieniach usługi w panelu SimPay)
 ![Krok 4](https://i.imgur.com/eDeeGQe.png)
 
 ### PaysafeCard, Direct Billing i SMS Premium
