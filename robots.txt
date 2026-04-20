@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wiki.vishop.pl/sitemap.xml.gz
+Sitemap: https://wiki.vishop.pl/sitemap.xml

@@ -1,0 +1,24 @@
+﻿# Wstęp
+
+> Vishop to darmowy itemshop Minecraft oraz FiveM. Dzięki architekturze SaaS niepotrzebna jest dodatkowa maszyna, itemshop jest hostowany na serwerach VIshop. Dzięki rozbudowanemu community itemshopu nasz sklep posiada funkcje, których brakuje innym sklepom.
+
+- [Wstęp](https://wiki.vishop.pl/readme.md): Wstęp
+- [Operatorzy płatności](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/readme.md): Płatności w VIshop obsługiwane są przez operatorów płatności. Dzięki takiemu rozwiązaniu VIshop nie pobiera żadnych prowizji, a płatności są w 100% bezpieczne dla obu stron - VIshop wspiera tylko legalnie działających operatorów płatności, którzy są wpisani do Komisji Nadzoru Finansowego (KNF).
+- [Dodawanie zdjęć](https://wiki.vishop.pl/zdjecia/readme.md): Zdjęcia w VIshop dodajemy z zewnętrznych źródeł, sam VIshop nie hostuje żadnych plików dodanych przez użytkowników. Link musi być bezpośrednim linkiem do zdjęcia.
+- [FAQ](https://wiki.vishop.pl/faq/readme.md): VIshop jest darmowym itemshopem, nie pobieramy prowizji ani opłat. Możesz natomiast wykupić w panelu premium dla swojego sklepu, dzięki temu zyskasz trochę dodatkowych funkcji.
+- [Plugin VIshop](https://wiki.vishop.pl/plugin/readme.md): Pobieramy najnowszą wersję pluginu z tej strony. Dokładne informacje na temat wspieranych przez plugin wersji i silników dostępne sa w ReadME pluginu, które możesz sprawdzić tutaj.
+- [Podpinanie domeny](https://wiki.vishop.pl/domena/readme.md): W celu podpięcia domeny udaj się do ustawień sklepu, gdzie znajdziesz pole podpisane jako "Własna domena" i wpisz tam swoją domenę, po czym kliknij przycisk "zapisz".
+- [Szablony](https://wiki.vishop.pl/szablony/readme.md): VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są po stronie klienta i można je w pełni edytować.
+- [VIshop Pay](https://wiki.vishop.pl/pay/readme.md): VIshop Pay to nowoczesny i prosty sposób na łatwe zaimplementowanie płatności na swojej stronie. Wystarczy umieścić skrypt VIshop na stronie i użyć funkcji od płatności podając ID sklepu i produktu.
+
+## Operatorzy płatności
+
+- [Konfiguracja IVhost](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/ivhost/readme.md): IVhost nie jest operatorem płatności, a hostingiem serwerów posiadającym integrację z itemshopem.
+- [Konfiguracja CashBill](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/cashbill/readme.md): Aby skorzystać z operatora CashBill najpierw musimy założyć konto - robimy to używając tego linku. Jeżeli prowadzimy działalność nierejestrowaną, to w polu NIP wpisujemy 10 zer, w REGION wpisujemy 9 zer, a w nazwie firmy "imię nazwisko działalność nierejestrowana".
+- [Konfiguracja IceHost](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/icehost/readme.md): IceHost nie jest operatorem płatności, a hostingiem serwerów posiadającym integrację z itemshopem.
+- [Konfiguracja Paybylink](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/paybylink/readme.md): Aby skorzystać z operatora Paybylink najpierw musimy założyć konto - zrobimy to tutaj. Jeżeli prowadzimy działalność nierejestrowaną to w polu NIP wpisujemy 10 zer, w REGION wpisujemy 9 zer, a w nazwie firmy "imię nazwisko działalność nierejestrowana".
+- [Konfiguracja PayPal](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/paypal/readme.md): Pierwszym krokiem jest przejście do panelu developera PayPal i zalogowanie się. Następnie w prawym górnym rogu przełączamy suwak z Sandbox na Live i klikamy Upgrade Now (jeżeli nam wyskoczy taka opcja).
+- [Konfiguracja SimPay](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/simpay/readme.md): SimPay.pl to nowoczesny operator płatności umożliwiający przyjmowanie płatności przez Przelewy online, BLIK, PayPal, Skrill, PaySafeCard, SMS Premium oraz Direct Billing (SMS+).
+- [Konfiguracja Stripe](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/stripe/readme.md): Pierwszym krokiem jest oczywiście założenie konta na platformie Stripe. Po rejestracji przechodzimy do panelu stripe (dashboard.stripe.com), a następnie po wybraniu naszego sklepu w menu po lewej na dole klikamy zakładkę developers.
+- [Konfiguracja Dpay](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/dpay/readme.md): Aby skorzystać z operatora Dpay najpierw musimy założyć konto - zrobimy to na stronie dpay.pl. Po rejestracji musimy zweryfikować nasze konto wysyłając przelew w celu zweryfikowania podanych danych, pełne informacje znajdziesz w panelu Dpay.
+- [Niestandardowy](https://wiki.vishop.pl/operatorzy-p%C5%82atno%C5%9Bci/custom/readme.md): Ta podstrona jest przeznaczona tylo dla programistów i pokazuje jak zintegrować się jako middleman pomiędzy VIshop, a nieobsługiwanym przez VIshop operatorem płatności.
