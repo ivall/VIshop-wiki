@@ -4,6 +4,28 @@ SimPay.pl to nowoczesny operator płatności umożliwiający przyjmowanie płatn
 
 SimPay umożliwia również rejestrację konta dla działalności nierejestrowanych.
 
+## Dla kogo jest SimPay?
+
+Z usług SimPay mogą korzystać:
+
+- osoby prowadzące działalność gospodarczą,
+- spółki, fundacje i stowarzyszenia,
+- osoby prowadzące działalność nierejestrowaną.
+
+Możliwe jest również założenie konta przez osoby niepełnoletnie. W takim przypadku podczas procesu weryfikacji wymagane będzie dostarczenie zgody rodzica lub opiekuna prawnego.
+
+## Rejestracja konta SimPay
+
+Jeżeli nie posiadasz jeszcze konta, zarejestruj się na stronie SimPay i przejdź proces weryfikacji.
+
+Podczas rejestracji:
+
+1. Utwórz konto klienta.
+2. Uzupełnij dane właściciela konta.
+3. Dodaj informacje o swojej działalności lub działalności nierejestrowanej.
+4. Prześlij wymagane dokumenty weryfikacyjne.
+5. Poczekaj na aktywację konta przez personel SimPay.
+
 ## Rejestracja usługi
 
 W panelu Klienta SimPay przejdź do zakładki Płatności online > Lista usług. Naciśnij zielony przycisk "Dodaj nową usługę".
