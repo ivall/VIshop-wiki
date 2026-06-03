@@ -10,6 +10,7 @@
 - [Podpinanie domeny](https://wiki.vishop.pl/domena/readme.md): W celu podpięcia domeny udaj się do ustawień sklepu, gdzie znajdziesz pole podpisane jako "Własna domena" i wpisz tam swoją domenę, po czym kliknij przycisk "zapisz".
 - [Szablony](https://wiki.vishop.pl/szablony/readme.md): VIshop w pakiecie premium oferuje szablony, czyli strony internetowe połączone z VIshop, które utrzymywane są po stronie klienta i można je w pełni edytować.
 - [VIshop Pay](https://wiki.vishop.pl/pay/readme.md): VIshop Pay to nowoczesny i prosty sposób na łatwe zaimplementowanie płatności na swojej stronie. Wystarczy umieścić skrypt VIshop na stronie i użyć funkcji od płatności podając ID sklepu i produktu.
+- [API VIshop](https://wiki.vishop.pl/api/readme.md): API VIshop jest w pełni publiczne i dostępne dla wszystkich. Do stworzenia pełnoprawnej strony działającej na API VIshop wymagane jest premium, część endpointów (od pozyskania listy serwerów i bezpośredniego generowania płatności) go wymaga.
 
 ## Operatorzy płatności
 
