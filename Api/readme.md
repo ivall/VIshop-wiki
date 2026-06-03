@@ -8,7 +8,7 @@ API VIshop jest w pełni publiczne i dostępne dla wszystkich. Do stworzenia pe�
 wymagane jest premium, część endpointów (od pozyskania listy serwerów i bezpośredniego generowania płatności) go wymaga.
 Również oficjalne szablony VIshop wykorzystują API i można je w pełni przerabiać i brać z nich kod działający na API.
 
-Oficjalnej dokumentacji API nie ma, natomiast istnieje kilka prostych sposób na rozwiązanie tego problemu. Pierwszym z nich
+Oficjalnej dokumentacji API nie ma, natomiast istnieje kilka prostych sposobów na rozwiązanie tego problemu. Pierwszym z nich
 są wspomniane już wcześniej oficjalne szablony VIshop. Działają one w pełni na API VIshop i tak naprawdę nie trzeba nawet pisać
 strony od nowa, a wystarczy przerobić front-end szablonu. Można też sprawdzić w ich kodzie jak działa API, jakie są endpointy,
 parametry itd.
