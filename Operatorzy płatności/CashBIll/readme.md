@@ -9,7 +9,7 @@ Jeżeli prowadzimy działalność nierejestrowaną, to w polu NIP wpisujemy 10 z
 
 ## Dodawanie usługi
 Przechodzimy w panelu CashBill do zakładki Nowy Sklep Internetowy, w polu adres URL sklepu wpisujemy link do sklepu na VIshop, 
-sklep musi znajdować się na naszej domenie. W polu adres reklamacji wpisujemy adres e-mail, na który klienci będą mogli
+sklep musi znajdować się na własnej domenie (nie vishop.pl). W polu adres reklamacji wpisujemy adres e-mail, na który klienci będą mogli
 wysyłać reklamacje. Platformę sklepową wybieramy jako inna (na samym dole). Resztę zostawiamy niezmiennie (chyba, że prowadzisz firmę
 i chcesz płatności Paysafecard - wtedy je zaznacz), akceptujemy regulamin i klikamy uruchom usługę.
 
