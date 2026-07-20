@@ -22,3 +22,8 @@ VIshop - https://dev123.vishop.pl/panel/shops/ID_SKLEPU/products.
 
 Istnieje również możliwość użycia VIshop Pay jako strony, na którą użytkownik zostanie przekierowany. Poprawny link
 dla każdego produktu to https://pay.vishop.pl/ID_SKLEPU/ID_PRODUKTU.
+
+Można również zmienić język wyświetlany w VIshop Pay dodając do funkcji argument lang z wartością "en":
+```
+vishopPay(idSklepu, idProduktu, "en")
+```
