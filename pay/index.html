@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833828381616">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.837890741504">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.6.0.833828381616" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.837890741504" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.833828381616" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.837890741504" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.833828381616" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.837890741504" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,10 @@ stronę na którą można przekierować użytkownika w celu dokonania przez nieg
 VIshop - <a href="https://dev123.vishop.pl/panel/shops/ID_SKLEPU/products">https://dev123.vishop.pl/panel/shops/ID_SKLEPU/products</a>.</p>
 <p>Istnieje również możliwość użycia VIshop Pay jako strony, na którą użytkownik zostanie przekierowany. Poprawny link
 dla każdego produktu to <a href="https://pay.vishop.pl/ID_SKLEPU/ID_PRODUKTU">https://pay.vishop.pl/ID_SKLEPU/ID_PRODUKTU</a>.</p>
+<p>Można również zmienić język wyświetlany w VIshop Pay dodając do funkcji argument lang z wartością &quot;en&quot;:</p>
+<div id="jak-tego-użyć-code-3" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">vishopPay(idSklepu, idProduktu, &quot;en&quot;)</code></pre>
+</doc-codeblock></div>
 
                 
                 <!-- Required only on API pages -->
