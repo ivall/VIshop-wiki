@@ -1,0 +1,412 @@
+﻿# VIshop — tworzenie własnego szablonu itemshopu (dokument dla AI)
+
+Ten dokument jest przeznaczony dla AI (Claude Code, Codex, Cursor, Copilot, Windsurf itp.)
+budujących szablon itemshopu opartego o VIshop. Zawiera pełny publiczny kontrakt API oraz sprawdzone
+konwencje z oficjalnych szablonów. Komunikuj się z użytkownikiem w jego języku.
+
+## Czym jest szablon VIshop
+
+Szablon to samodzielna strona internetowa (hostowana przez właściciela sklepu), która renderuje
+itemshop Minecraft/FiveM w całości z publicznego API VIshop na podstawie `shop_id`. Wszystkie dane
+sklepu — nazwa, logo, nawigacja, serwery/tryby, produkty, ceny, widgety, podstrony — pochodzą z API;
+w szablonie lokalnie trzyma się tylko branding i konfigurację.
+
+## Zanim napiszesz kod — zadaj użytkownikowi pytania
+
+Zbierz od użytkownika następujące decyzje (nie zakładaj ich samodzielnie):
+
+1. **`shop_id`** (widoczny w panelu VIshop) oraz gra: Minecraft czy FiveM.
+2. **Sposób płatności** — zawsze daj wybór:
+   - **VIshop Pay** — zero własnego checkoutu, jeden skrypt + jedna funkcja (lightbox) albo link
+     do zewnętrznej strony płatności,
+   - **płatności na stronie** — własny formularz zakupu, pełna kontrola nad wyglądem, więcej pracy.
+   Szczegóły i tabela decyzyjna w sekcji „Płatności" niżej.
+3. **Technologia** — zawsze daj wybór: Nuxt 3 + Pinia + Tailwind (domyślna, tak są zbudowane
+   oficjalne szablony) albo cokolwiek innego (Next, Astro, Vite + vanilla JS…) — API to zwykły REST
+   z otwartym CORS, działa z każdym stackiem.
+4. **Funkcje** (wielokrotny wybór): widget ostatnich zakupów, najbogatsi gracze, pasek celu
+   miesięcznego, strona voucherów, kody rabatowe (tylko przy płatnościach na stronie), ogłoszenia,
+   podstrony + nawigacja z panelu, lista administracji, licznik graczy online (mcsrvstat),
+   slidery ilości.
+5. **Kierunek designu**: kolory, klimat, strony referencyjne.
+
+## Konwencje (z oficjalnych szablonów)
+
+- Cała edytowalna przez użytkownika konfiguracja w JEDNYM miejscu (Nuxt:
+  `nuxt.config.js` → `runtimeConfig.public`): `shop_id`, adres serwera, opis, link Discord,
+  social media, lista administracji, kolory. Reszta pochodzi z API.
+- Baza API: `https://dev123.vishop.pl/panel/shops/{shop_id}/`. Mimo nazwy sugerującej środowisko
+  deweloperskie to JEST produkcyjny host API (używa go oficjalna dokumentacja i wszystkie oficjalne
+  szablony). Trzymaj bazowy URL w jednym miejscu (composable / store / helper), nie kopiuj po plikach.
+- Theming: zmienne CSS (`--primary-color` itp.) zasilane z konfiguracji, żeby właściciel mógł
+  przemalować sklep bez ruszania komponentów.
+- Gating funkcji: renderuj widget tylko gdy flagi sklepu na to pozwalają (`shop.latest_payments`,
+  `shop.richest_player`, `shop.monthly_goal_public !== null`) — endpointy wyłączonych widgetów
+  zwracają 403.
+- Skiny graczy: `https://minotar.net/helm/{nick}/64`, `https://mc-heads.net/body/{nick}/110`.
+  Status serwera: `https://api.mcsrvstat.us/2/{adres}`.
+- Wdrożenie: Dockerfile (`node:22-alpine`, aplikacja na :3000) + nginx reverse-proxy w
+  docker-compose, albo ręcznie `npm install && npm run build && npm run start` za nginx.
+  Udokumentuj oba sposoby w README wygenerowanego projektu. Pełny poradnik instalacji:
+  https://wiki.vishop.pl/szablony/
+- Teksty UI domyślnie po polsku (taka jest społeczność VIshop); zapytaj, jeśli użytkownik chce
+  inny język lub i18n.
+
+## Twarde zasady
+
+- **Stopka to wymóg licencyjny.** Każdy szablon MUSI mieć widoczną stopkę z linkiem do VIshop, np.
+  `Strona jest zasilana przez <a href="https://vishop.pl">itemshop Minecraft</a> VIshop.pl`.
+  Usunięcie lub ukrycie jej łamie licencję i skutkuje blokadą sklepu. Umieść nad nią komentarz
+  ostrzegawczy w kodzie.
+- **Sanityzuj cały HTML z API** przed wstrzyknięciem (`product.description`, `subpage.content`,
+  `announcement.content`).
+- **Nigdy nie hardkoduj „zł".** Każdą kwotę formatuj walutą `shop.currency` (PLN / EUR / USD / UAH)
+  z `GET /panel/shops/{id}/`.
+- Końcowe ukośniki (trailing slash) w URL-ach API są wymagane.
+
+---
+
+# Publiczne API — referencja
+
+Baza: `https://dev123.vishop.pl` — wszystkie ścieżki sklepu pod `/panel/shops/{shop_id}/`.
+Tylko JSON. **Wymagane końcowe ukośniki.** CORS otwarty — można wołać bezpośrednio z przeglądarki.
+
+**Autoryzacja:** każdy GET poniżej działa bez uwierzytelnienia. Dwie rzeczy są **objęte wymogiem
+premium przy wywołaniu z zewnętrznej domeny** (origin spoza domen VIshop): `GET /servers/` oraz
+`POST /products/{id}/payments/` → 403, jeśli sklep nie ma aktywnego premium. Reszta działa też
+dla darmowych sklepów.
+
+## Spis endpointów
+
+| Metoda | Ścieżka (pod `/panel/shops/{shop_id}`) | Cel |
+|---|---|---|
+| GET | `/` | Informacje o sklepie + ustawienia + ogłoszenia |
+| GET | `/servers/` | Lista serwerów/trybów (premium z zewnętrznej domeny) |
+| GET | `/servers/{id}/` | Pojedynczy serwer |
+| GET | `/products/?server={id}` | Produkty serwera (`name=` wyszukiwanie, `simple=1` okrojony format) |
+| GET | `/products/{id}/` | Pojedynczy produkt |
+| GET | `/payments/` | Operatorzy płatności skonfigurowani w sklepie |
+| POST | `/products/{id}/payments/` | Utworzenie płatności — sekcja „Płatności" |
+| GET | `/payment-status/{payment_uuid}/` | Status transakcji |
+| GET | `/latest_payments/?amount=N` | Ostatnie zakupy (domyślnie 5, max 15) |
+| GET | `/richest_player/?amount=N` | Najbogatsi gracze (1–3) |
+| GET | `/announcements/` | Ogłoszenia (są też osadzone w obiekcie sklepu) |
+| GET | `/subpages/{id}/` | Podstrona CMS |
+| GET | `/navigation/` | Pozycje menu (też osadzone w obiekcie sklepu) |
+| POST | `/codes/use/` | Podgląd kodu rabatowego |
+| POST | `/vouchers/use/` | Realizacja vouchera |
+| GET | `/login_steam/` | FiveM: URL przekierowania Steam OpenID |
+| GET | `/steam_callback/?...` | FiveM: callback → `{uid, username}` |
+
+Poza zakresem sklepu: `GET /panel/domain/{domena}/` → goły integer z id sklepu (szablon na
+własnej domenie może tak ustalić swój `shop_id`).
+
+## Sklep — `GET /panel/shops/{shop_id}/`
+
+Publiczne pola:
+
+```
+id, name, owner, game, theme, logo, navigation, style, primary_color,
+home_link, online, latest_payments, richest_player, full_color, rules,
+ml_widget, sd_widget, premium_until, premium, announcements,
+monthly_goal_public, domain, richest_player_since, currency
+```
+
+- `game`: `"minecraft"` | `"fivem"` — wpływa na walidację nicku i flow Steam
+- `theme`: `"light"` | `"dark"`; `primary_color`: `#rrggbb`; `style`: surowy CSS ustawiony przez właściciela
+- `online`: bool — gdy `false`, wyłącz kupowanie (API odrzuca tworzenie płatności komunikatem `"This shop is offline"`)
+- `latest_payments`, `richest_player`: bool — przełączniki widgetów; gdy wyłączone, endpoint widgetu zwraca 403
+- `monthly_goal_public`: procent 0–100 realizacji celu miesięcznego albo `null`, gdy cel nie jest ustawiony
+- `currency`: `"PLN" | "EUR" | "USD" | "UAH"` — **wszystkie ceny w API to gołe liczby; każdą kwotę formatuj tą walutą**
+- `rules`: link/treść do checkboxa akceptacji regulaminu (renderuj checkbox tylko gdy ustawione)
+- `navigation[]`: `{id, shop, type: "redirect"|"subpage", name, url, subpage, subpage_name}` — `subpage` → link wewnętrzny `/subpage/{id}`, w przeciwnym razie zewnętrzny `url`
+- `announcements[]`: osadzone, ten sam format co endpoint ogłoszeń
+
+## Serwery — `GET /servers/`
+
+```json
+[{ "id": 1, "name": "Survival", "shop": 1, "ip": "mc.przyklad.pl", "image": "https://...", "hidden": false }]
+```
+
+Kolejność wg ustawień właściciela. Ukryte serwery są wykluczone z listy (patrz „Ukryte elementy").
+
+## Produkty — `GET /products/?server={server_id}`
+
+```
+id, name, description, short_description, server, image,
+main_price, require_player_online, slider, slider_min, slider_max,
+slider_name, promo, order, hidden, prices
+```
+
+- `description`: HTML (sanityzuj przed renderowaniem); `short_description`: zwykły tekst, ≤255 znaków
+- `promo`: procent 1–99 albo `null` — cena końcowa = `cena × ilość × (1 − promo/100)`
+- `slider`: gdy `true`, kupujący wybiera `quantity` z przedziału `[slider_min, slider_max]`,
+  z etykietą `slider_name` (domyślnie „Ilość"); gdy `false`, serwer wymusza ilość 1
+- `prices`: obiekt z kluczem per operator, wartość = cena u tego operatora albo `null`, gdy produkt
+  nie jest sprzedawany tą metodą:
+
+```
+icehost, ivhost, skillhost, paypal, hotpay_sms, hotpay_transfer,
+hotpay_paysafecard, cashbill_transfer, cashbill_paysafecard, cashbill_paypal,
+paybylink_transfer, paybylink_paysafecard, paybylink_sms,
+simpay_directbilling, simpay, dpay, stripe, paymentic, custom
+```
+
+UWAGA: dla operatorów SMS (`hotpay_sms`, `paybylink_sms`) wartość **nie jest kwotą** — to id
+obiektu numeru SMS; rozwiąż je w `sms_numbers` operatora (niżej).
+
+`?simple=1` zwraca okrojony format: `{id, name, server: {…}, slider_max}`.
+
+## Operatorzy płatności — `GET /payments/`
+
+```json
+[{
+  "id": 7, "name": "Przelew", "provider": "cashbill_transfer",
+  "sms_content": null, "is_sms": false,
+  "sms_numbers": [{ "id": 3, "number": "7255", "price": "3.00", "sms_content": "...", "payment_provider": 7 }]
+}]
+```
+
+- `name` = etykieta przycisku ustawiona przez właściciela; `is_sms` = slug kończy się na `_sms`
+- Budowanie listy metod dla produktu: `providers.filter(p => product.prices[p.provider] != null)`
+- Cena/numer/treść SMS: `provider.sms_numbers.find(n => n.id === product.prices[provider.provider])`
+
+## Status płatności — `GET /payment-status/{payment_uuid}/`
+
+```json
+{ "player": "test", "status": "executed", "product_name": "VIP", "quantity": 1, "server": 1, "created_at": "..." }
+```
+
+`status`: `waiting` (nieopłacona) → `executing` (opłacona, oczekuje na realizację) → `executed`
+(zrealizowana); również `canceled`. Traktuj **opłacona = `status !== 'waiting'`**. 404, gdy id nie
+należy do tego sklepu.
+
+## Ostatnie zakupy — `GET /latest_payments/?amount=5`
+
+Tablica obiektów w formacie statusu płatności (tylko opłacone i widoczne, od najnowszych).
+`amount` domyślnie 5, max 15. Błędy: 403 `"This widget is disabled"`, 400 `"Incorrect amount"` /
+`"Max amount is 15"`.
+
+## Najbogatsi gracze — `GET /richest_player/?amount=1`
+
+`amount=1` (domyślnie) → pojedynczy obiekt `{"player": "...", "spend": "234.86"}`; `amount=2|3` →
+tablica. Pusty sklep → 200 z pustym body (obsłuż to). 403, gdy widget wyłączony.
+
+## Ogłoszenia — `GET /announcements/`
+
+```json
+[{ "id": 12, "shop": 34, "color": "#ff0000", "content": "<p>HTML ≤5000 znaków</p>" }]
+```
+
+Max 5 na sklep. `color` to kolor akcentu/ramki. Osadzone też w obiekcie sklepu — zwykle wystarczy
+jeden `GET /panel/shops/{id}/`. Sanityzuj `content`.
+
+## Podstrony — `GET /subpages/{id}/`
+
+```json
+{ "id": 495, "name": "Regulamin", "content": "<h1>…</h1>", "shop": 1 }
+```
+
+`content` to HTML autorstwa właściciela — sanityzuj, renderuj w klasie typograficznej (`prose`).
+
+## Kody rabatowe — `POST /codes/use/`
+
+Body: `{"code": "ABC123", "product": 13645}` → 200:
+
+```json
+{ "id": 1, "products": [...], "code": "ABC123", "discount": 20, "valid_until": "2026-12-31", "uses": 5 }
+```
+
+`discount` = procent. 404, gdy kod nieznany, przeterminowany, wyczerpany albo nieprzypisany do tego
+produktu. **To tylko podgląd** — żeby kod faktycznie zadziałał, wyślij `promo_code` w POST tworzącym
+płatność. Kody są ignorowane na produktach, które mają już `promo`; oficjalne szablony blokują wtedy
+pole kodu.
+
+## Vouchery — `POST /vouchers/use/`
+
+Body: `{"code": "<kod>", "player": "<nick>", "steam_uid": "<17 cyfr, tylko FiveM>"}` → 200
+`"Voucher has been used"` (realizacja dzieje się po stronie serwera; produkt/ilość wynikają z
+vouchera). Błędy: 404 nieznany/zużyty kod, 400 błędy pól typu `{"player": ["Incorrect player name"]}`.
+
+## Walidacja i różne
+
+- Nick: Minecraft `^\.?\w{3,16}$`; FiveM 2–32 znaki + `steam_uid` (17 cyfr) uzyskany przez endpointy Steam
+- **Ukryte elementy:** endpointy list wykluczają serwery/produkty z `hidden` (ukrycie serwera ukrywa
+  też jego produkty), ale endpointy szczegółów nadal zwracają je po id i nadal można je kupić —
+  traktuj `hidden` jako *nielistowane* i sam sprawdzaj flagę na stronach z bezpośrednim linkiem
+- Listy (serwery, produkty, ogłoszenia, podstrony, nawigacja) to zwykłe tablice bez paginacji
+- Body błędów to zwykłe stringi (`"This shop is offline"`) albo tablice błędów pól — mapuj je na
+  polskie komunikaty po stronie klienta; API nie ma parametru języka
+- API nigdy nie zbiera e-maila kupującego
+
+---
+
+# Płatności — dwa warianty
+
+Zawsze daj użytkownikowi wybór. Premium jest potrzebne w obu wariantach, ale bramka jest w innym
+miejscu: VIshop Pay działa tylko dla sklepów premium (`pay.vishop.pl` odrzuca sklepy bez premium),
+a w wariancie płatności na stronie POST tworzący płatność (oraz `GET /servers/`) jest objęty
+wymogiem premium przy wywołaniu z zewnętrznej domeny.
+
+| | **VIshop Pay** | **Płatności na stronie** |
+|---|---|---|
+| Nakład pracy | jeden skrypt + jedno wywołanie funkcji | pełny UI checkoutu (formularz, operatorzy, SMS, kody) |
+| UX | lightbox hostowany przez VIshop (iframe) | w pełni spójny z marką, bez iframe |
+| Kody rabatowe / SMS / ilość | obsłużone w oknie płatności | implementujesz wszystko sam |
+| Język | parametr `lang` (`"en"`) | dowolny, co zbudujesz |
+| Najlepszy do | szybki start, minimum utrzymania | własny design, pełna kontrola |
+
+## Wariant A — VIshop Pay
+
+Załaduj skrypt globalnie (Nuxt: `app.head.script`):
+
+```html
+<script src="https://vishop.pl/pay.js" defer></script>
+```
+
+Przycisk kupna:
+
+```js
+// vishopPay(idSklepu, idProduktu, lang?) — lang opcjonalny, np. "en"
+buyProduct(id) {
+  vishopPay(this.store.shop.id, id)
+}
+```
+
+Działanie: otwiera pełnoekranowy lightbox z iframe do `https://pay.vishop.pl/{idSklepu}/{idProduktu}`
+(`?lang=` doklejone, gdy podane). Cały checkout (nick, metoda, kod, płatność) dzieje się w środku.
+**Nie ma callbacku/postMessage** — nie czekaj na wynik; strona płatności sama pokazuje rezultat.
+Ponowne wywołanie przy otwartym oknie to no-op; przycisk ✕ zamyka.
+
+Alternatywa bez JS: link/przekierowanie wprost na `https://pay.vishop.pl/{idSklepu}/{idProduktu}`
+(np. otwierane w nowej karcie).
+
+Przy tym wariancie szablon nie potrzebuje strony produktu/checkoutu — wystarczą karty produktów z
+przyciskiem kupna. Strony `/payment/[id]` i `/voucher` nadal warto mieć.
+
+## Wariant B — checkout na stronie
+
+Szablon renderuje checkout (nick, metoda płatności, slider ilości, kod rabatowy, checkbox
+regulaminu) i tworzy płatność przez API.
+
+### 1. Zbuduj listę metod płatności
+
+```js
+const providers = await fetch(`${API}/payments/`).then(r => r.json())
+const product   = await fetch(`${API}/products/${productId}/`).then(r => r.json())
+// tylko operatorzy z ceną dla tego produktu:
+const methods = providers.filter(p => product.prices[p.provider] != null)
+// auto-wybór, gdy jest dokładnie jeden
+```
+
+### 2. Pokaż cenę
+
+```js
+function displayPrice(product, provider, quantity = 1, promoCode = null) {
+  let price
+  if (provider.is_sms) {
+    // dla operatorów SMS prices[slug] to ID numeru SMS, nie kwota
+    const num = provider.sms_numbers.find(n => n.id === product.prices[provider.provider])
+    price = parseFloat(num.price)          // cena brutto SMS; pokaż też num.number + sms_content
+  } else {
+    price = parseFloat(product.prices[provider.provider])
+  }
+  let final = price * quantity
+  if (product.promo)   final *= 1 - product.promo / 100        // promocja produktu (badge "-X%")
+  else if (promoCode)  final *= 1 - promoCode.discount / 100   // kody nie łączą się z promocją
+  return final.toFixed(2)                  // dopisz shop.currency, NIGDY sztywne "zł"
+}
+```
+
+Ilość: tylko gdy `product.slider`; zakres `[slider_min, slider_max]`, etykieta `slider_name`,
+wartość początkowa `slider_min`.
+
+Podgląd kodu rabatowego: `POST ${API}/codes/use/` z `{code, product: productId}` → pokazuje
+`discount`; zablokuj pole, gdy produkt ma `promo`. Zachowaj surowy string kodu — trzeba go wysłać
+ponownie przy zakupie.
+
+### 3. Utwórz płatność
+
+```js
+async function buyProduct() {
+  // najpierw walidacja: nick podany, metoda wybrana, regulamin zaakceptowany (gdy shop.rules), shop.online
+  const body = {
+    player: playerName,
+    provider: paymentMethod,                                    // slug, np. "cashbill_transfer"
+    quantity: parseInt(quantity),                               // tylko przy product.slider
+    success_page: window.location.origin + '/payment/{PAYMENT_ID}', // dosłowny placeholder — API go podstawia
+  }
+  if (promoCode?.code) body.promo_code = promoCode.code
+  if (isSms) body.sms_code = smsCode                            // kod otrzymany przez kupującego SMS-em
+  // sklepy FiveM: body.steam_uid = steamUid (17 cyfr)
+
+  const res  = await fetch(`${API}/products/${productId}/payments/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
+    body: JSON.stringify(body),
+  })
+  const data = await res.json()
+  if (!res.ok) { showError(mapApiError(data)); return }         // zwykły string albo błędy pól
+
+  if (!isSms) {
+    if (!data.payment_url) { showError('Nie udało się wygenerować transakcji'); return }
+    window.location = data.payment_url                          // checkout operatora
+  } else {
+    window.location = `/payment/${data.id}`                     // SMS: zrealizowane od razu, bez redirectu
+  }
+}
+```
+
+Odpowiedź sukcesu (201): `{ id: "<uuid>", player, provider, payment_url, payment_id }` — `id` to
+uuid płatności VIshop (użyj go do strony statusu); `payment_id` to id transakcji u operatora (tylko
+do wyświetlenia). `quantity` wysyłaj tylko dla produktów ze sliderem — bez slidera serwer i tak
+wymusza 1.
+
+Flow SMS po kolei (wykrywanie: `is_sms` / slug kończy się na `_sms`):
+1. Kupujący wybiera metodę SMS → pokaż numer, wymaganą treść wiadomości (`sms_content`) i cenę
+   brutto — wszystko z dopasowanego wpisu `sms_numbers`.
+2. Kupujący wysyła SMS z telefonu i dostaje kod zwrotny.
+3. Kupujący wpisuje kod w formularz → wyślij go jako `sms_code` w POST powyżej.
+4. Odpowiedź ma `payment_url: null` — zakup zrealizowany od razu; przejdź na `/payment/{id}`.
+
+Częste błędy (400, zwykły string): `"This shop is offline"`, `"Incorrect payment provider"`,
+`"Incorrect player name"`, `"Incorrect quantity"`, komunikaty operatorów o minimalnej kwocie
+(już po polsku). 403 = bramka premium. 404 = zły `promo_code`. Mapuj angielskie stringi na polskie
+po stronie klienta. Tworzenie płatności jest limitowane per IP: zablokuj przycisk na czas requestu,
+nigdy nie ponawiaj automatycznie w pętli.
+
+### 4. Strona statusu `/payment/[id]`
+
+```js
+const data = await fetch(`${API}/payment-status/${route.params.id}/`).then(r => r.json())
+const paid = data.status && data.status !== 'waiting'
+// paid → "Zamówienie opłacone, realizacja automatycznie w ciągu 30 sekund."
+// nie  → "Zamówienie nie zostało jeszcze opłacone" + przycisk odświeżenia (albo polling co kilka sekund)
+```
+
+Oba warianty kończą tutaj, gdy wysłano `success_page` (checkout na stronie) — VIshop Pay pokazuje
+status we własnym oknie.
+
+---
+
+# Częste błędy
+
+| Błąd | Poprawka |
+|---|---|
+| Sztywne „zł" przy cenach | Używaj `shop.currency` wszędzie, gdzie pokazujesz kwotę |
+| Fetch widgetu wywala 403 | Sprawdzaj flagi sklepu przed pobraniem |
+| Kupujący nie wraca do sklepu po płatności | Wyślij `success_page` z dosłownym placeholderem `{PAYMENT_ID}` — API go podstawia |
+| Operator SMS potraktowany jak redirect | Slug kończący się `_sms` → brak `payment_url`; pokaż numer/treść, zbierz kod |
+| Kod rabatowy „nie działa" | `POST /codes/use/` to tylko podgląd; wyślij też `promo_code` w POST płatności |
+| Ukryty produkt/serwer wycieka przez bezpośredni link | Listy wykluczają `hidden`, endpointy szczegółów nie — sprawdzaj flagę na stronach szczegółów |
+| Strona płatności wiecznie „nieopłacona" | Opłacona = `status !== 'waiting'`; daj odświeżenie lub polling |
+| 403 na liście serwerów / POST płatności z szablonu | Obie rzeczy wymagają premium z zewnętrznej domeny — właściciel musi mieć aktywne premium VIshop |
+| Spam zakupów / podwójne kliknięcia | Tworzenie płatności jest limitowane per IP — blokuj przycisk na czas requestu, nie ponawiaj automatycznie |
+
+# Na koniec
+
+- Przetestuj z prawdziwym `shop_id` użytkownika: załaduj sklep, serwery, produkty, przejdź ścieżkę
+  zakupu od karty produktu do strony statusu.
+- Wygeneruj README z instrukcją konfiguracji (`shop_id`, kolory, zdjęcia) i wdrożenia
+  (docker compose oraz ręcznie), po polsku.
+- Przypomnij: stopka VIshop musi zostać (licencja).

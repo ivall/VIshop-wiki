@@ -7,6 +7,9 @@ po stronie klienta i można je w pełni edytować. Dostępne szablony znajdziesz
 
 Istnieje również możliwość odpłatnego, prostego hostowania szablonów na [szablony.tems.pl](https://szablony.tems.pl).
 
+Możesz też stworzyć własny szablon od zera z pomocą AI:
+[!ref Vibecoding — stwórz własny szablon z AI](/vibecoding/)
+
 ## Konfiguracja
 ### Konfiguracja szablonu
 Pobieramy wybrany szablon z panelu VIshop z zakładki "Szablony". Otwieramy plik `nuxt.config.js` i dostosowujemy podstawowe 
