@@ -16,6 +16,11 @@ tego w zbadaj element.
 Trzecim sposobem jest skorzystanie z tego - https://pastebin.com/BGbqbZQc, jest to prowizoryczna dokumentacja API wykonana
 na podstawie szablonu.
 
+Istnieje również pełna dokumentacja przygotowana pod AI (Claude Code, Codex, Cursor itp.) -
+https://wiki.vishop.pl/szablony-ai.txt - zawiera wszystkie publiczne endpointy, formaty odpowiedzi oraz oba sposoby
+implementacji płatności. Możesz wkleić ten link swojemu AI, albo po prostu z niej korzystać jak z dokumentacji.
+Zobacz też [Vibecoding szablonu](/vibecoding/).
+
 Warto też pamiętać o [VIshop Pay](/pay/), znacząco to ułatwia sprawę - dzięki temu nie musimy zajmować się generowaniem zakupu,
 kodami rabatowymi i generalnie tymi najcięższymi rzeczami. Wystarczy tylko pobierać listę serwerów, produktów i je wyświetlać
 co jest banalne i pozwala na szybkie stworzenie własnej strony działającego na VIshop.
